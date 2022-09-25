@@ -757,9 +757,77 @@ We don’t want to disturb her too long. We can only hope she finds rest. Now le
 <<include "header">>
 <main>
 
+Okay. There are two options here: stairs or lift. If you can use the stairs, I’d recommend that to avoid overcrowding in the lift.
 
-<<button "I'm ready">><<set $prevpass to $passage>><<goto "GB-10">><</button>>
+<<button "stairs">><<set $prevpass to $passage>><<goto "GB-16A">><</button>>
 
+<<button "lift">><<set $prevpass to $passage>><<goto "GB-16B">><</button>>
+
+</main>
+<<include "footer">>
+
+
+:: GB-16A {"position":"2600,300","size":"100,100"}
+<<set $passage to "GB-16A">><<set $nextpass to "">>
+<<include "header">>
+<main>
+
+Stairs, it is. Look for a concrete stairwell on St Giles Terrace. Opposite the Wood Street Bar and Restaurant. Go up there. It’ll lead to the new Barbican complex. Built in 1982.
+
+Stairs, it is. Look for a concrete stairwell on St Giles Terrace. Opposite the Wood Street Bar and Restaurant. Go up there. It’ll lead to the new Barbican complex. Built in 1982.
+
+<<button "I'm at the top">><<set $prevpass to $passage>><<goto "GB-17">><</button>>
+
+</main>
+<<include "footer">>
+
+
+:: GB-16B {"position":"2600,500","size":"100,100"}
+<<set $passage to "GB-16B">><<set $nextpass to "">>
+<<include "header">>
+<main>
+
+Make sure you’re on St Giles Terrace facing away from the
+church. Look for a bright yellow CCTV sign in a concrete doorway. Go over to that and you’ll find the lift.
+
+When you're inside go up to level P for Podium.
+
+TIME TO GET UP LIFT
+
+
+When you leave the lift, take a left, then a quick right at the red	post-boxes to The Postern. Stop at	the top of the stairwell and let me	know you’re there.
+
+<<button "I'm there">><<set $prevpass to $passage>><<goto "GB-17">><</button>>
+
+
+
+
+</main>
+<<include "footer">>
+
+
+:: GB-17 {"position":"2800,400","size":"100,100"}
+<<set $passage to "GB-17">><<set $nextpass to "">>
+<<include "header">>
+<main>
+
+Bingo! You’ll see signs pointing to the Barbican Centre but we want to go the other, towards Barbican tube station and Wallside.
+
+These are the Barbican highwalks. In the future, all cities will be like this.
+
+Take your time, walk slowly and listen carefully for sounds. Hear that low humming noise? The sounds of children playing perhaps? The distant traffic?
+
+You need to heighten your sense to develop a sensitivity to the spirit world.
+
+Keep your eyes peeled for the right turn onto Wallside, just before the benches. It’s easy to miss.
+
+On Wallside, you’ll see Cripplegate on your right. Take your time. Listen to the water. To the voices. There are many echoes here. Are they all of the living? We might never know...
+
+MUSIC NEEDED
+
+MAP NEEDED
+
+<<button "I'm at the top">><<set $prevpass to $passage>><<goto "GB-18">><</button>>
 
 </main>
 <<include "footer">>
