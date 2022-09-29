@@ -516,6 +516,8 @@ You have two options:
 <<include "header">>
 <main>
 
+/*Creepy music*/
+
 You saw the flyers then?
 
 The flyers? I left them in all the pubs round here.
@@ -552,11 +554,31 @@ Now, like with fishing, there are no guarantees. I will be taking you to the pla
 <<include "header">>
 <main>
 
-Next, we’ll be using state-of-the-art para-communication technology to help us pick up signals from the other side. Sometimes a ghost can be seen or heard by the naked eye or ear but this only happens when there is a very strong energy or if a person has a particular sensitivity. For most of us, we’ll need this communication device. You should each have one of these devices in your hands. Let me know if you don’t and I’ll make sure you get one.
+Next, we’ll be using state-of-the-art para-communication technology to help us pick up signals from the other side. Sometimes a ghost can be seen or heard by the naked eye or ear but this only happens when there is a very strong energy or if a person has a particular sensitivity. For most of us, we’ll need this communication device.
 
-GHOST DEVICE HERE
+You should each have one of these devices in your hands. Let me know if you don’t and I’ll make sure you get one.
+
+/*ghost audio should be replaced with white noise */
+
+<div class = "detector">
+<<set $spinning to false>>
+<<link "<img src = 'https://media3.giphy.com/media/1hpCPjWPnKpKLwAGIX/giphy.gif'>" >>
+	<<if $spinning>>
+    	<<set $spinning to false>>
+        <<audio ":all" stop>>
+		<<removeclass ".detector" "spinning">>
+    <<else>>
+   		<<set $spinning to true>>
+        <<audio "badjoke" play>>
+   	    <<addclass ".detector" "spinning">>
+    <</if>>
+<</link>> 
+</div>
 
 <<button "Got it">><<set $prevpass to $passage>><<goto "GB-07">><</button>>
+
+
+
 
 </main>
 <<include "footer">>
@@ -566,11 +588,15 @@ GHOST DEVICE HERE
 <<set $passage to "GB-07">><<set $nextpass to "">>
 <<include "header">>
 <main>
+
 Good. Don’t use it now! I’ll let you know when there’s a presence nearby. Don’t want them running out of batteries.
 
 Okay, let’s get going. You all ready?
 
 <<button "Ready">><<set $prevpass to $passage>><<goto "GB-08">><</button>>
+
+
+
 
 </main>
 <<include "footer">>
@@ -598,7 +624,7 @@ Alright. Opposite direction. Up to London Wall.
 
 Now when we cross London Wall, look both ways for traffic. Stay safe. Very important. I know sometimes people get overexcited. But the ghosts aren’t going anywhere. That’s their whole thing.
 
-MAP NEEDED
+/*MAP NEEDED*/
 
 <<button "I made it across">><<set $prevpass to $passage>><<goto "GB-09">><</button>>
 
@@ -633,6 +659,8 @@ When you’re either inside or round the side, let me know and I’ll tell you t
 <<button "I'm ready">><<set $prevpass to $passage>><<goto "GB-10">><</button>>
 
 
+
+
 </main>
 <<include "footer">>
 
@@ -652,7 +680,7 @@ Of these, the best known is the story of the so-called Cripplegate Ghost. This h
 This lady, we don’t know her name. She and her husband are pretty wealthy and she dies suddenly at a young age. Her husband’s devastated of course as they had only just married. So he has her body laid in the Church in a coffin, as was the
 custom, before her funeral. She’s laid in the coffin in her wedding dress, on her finger: her wedding ring.
 
-###### MUSIC NEEDED HERE
+/* Maybe some music kicks in here providing atmosphere. */
  
 As it happens this ring was very valuable. Hearing that this woman had died and that her body was in the church, a thief breaks in thinking there might be something to steal.
 
@@ -682,6 +710,10 @@ Some say when the servant came to the door, there was nobody there. And that the
 </div>
 
 
+
+
+
+
 </main>
 <<include "footer">>
 
@@ -694,6 +726,8 @@ Some say when the servant came to the door, there was nobody there. And that the
 They say that when the servant opened the door, the woman was there in her wedding dress with her ring and her bleeding finger. That the servant ran away in fear and the husband came to the door. At first he thought she was a ghost but then she spoke and he realised that his wife was still alive. By stabbing her with the knife to steal her ring, the thief had brought her back to the world of the living. She and her husband had a long and happy life together but the thief was haunted by that moment until the end of his days.
 
 <<button "Next">><<set $prevpass to $passage>><<goto "GB-12">><</button>>
+
+
 
 
 </main>
@@ -709,10 +743,33 @@ Whatever the truth, there’s said to be a strange energy about this church. Une
 
 Let’s try the Paracommunicator. If you’re outside the church, just get as close as you can to the walls. Let me know what you hear.
 
-GHOST MACHINE HERE
+<div class = "detector">
+<<set $spinning to false>>
+<<link "<img src = 'https://media3.giphy.com/media/1hpCPjWPnKpKLwAGIX/giphy.gif'>" >>
+	<<if $spinning>>
+    	<<set $spinning to false>>
+        <<audio ":all" stop>>
+		<<removeclass ".detector" "spinning">>
+    <<else>>
+   		<<set $spinning to true>>
+        <<audio "badjoke" play>>
+   	    <<addclass ".detector" "spinning">>
+    <</if>>
+<</link>> 
+</div>
 
+/*The Para-communicator, which has just delivered white noise,
+when clicked on up to now, will start by delivering white
+noise (at a slightly different pitch to indicate that
+something has changed) before it “tunes into a sound”. A
+woman’s voice, ghostly, incomprehensible at first, but
+gradually clarifying into - */
+
+Noooooo, my ring. My wedding ring...
 
 <<button "I heard something.">><<set $prevpass to $passage>><<goto "GB-13">><</button>>
+
+
 
 
 </main>
@@ -728,6 +785,8 @@ Me too. What did you hear?
 
 
 <<button 'She said "No, my ring. My wedding ring."'>><<set $prevpass to $passage>><<goto "GB-14">><</button>>
+
+
 
 
 </main>
@@ -762,6 +821,10 @@ Okay. There are two options here: stairs or lift. If you can use the stairs, I�
 
 <<button "lift">><<set $prevpass to $passage>><<goto "GB-16B">><</button>>
 
+
+
+
+
 </main>
 <<include "footer">>
 
@@ -777,6 +840,10 @@ Stairs, it is. Look for a concrete stairwell on St Giles Terrace. Opposite the W
 
 <<button "I'm at the top">><<set $prevpass to $passage>><<goto "GB-17">><</button>>
 
+
+
+
+
 </main>
 <<include "footer">>
 
@@ -791,8 +858,7 @@ church. Look for a bright yellow CCTV sign in a concrete doorway. Go over to tha
 
 When you're inside go up to level P for Podium.
 
-TIME TO GET UP LIFT
-
+/*Beat to give them time to get up.*/
 
 When you leave the lift, take a left, then a quick right at the red	post-boxes to The Postern. Stop at	the top of the stairwell and let me	know you’re there.
 
@@ -822,9 +888,9 @@ Keep your eyes peeled for the right turn onto Wallside, just before the benches.
 
 On Wallside, you’ll see Cripplegate on your right. Take your time. Listen to the water. To the voices. There are many echoes here. Are they all of the living? We might never know...
 
-MUSIC NEEDED
+/* Some time for them to walk. Music. */
 
-MAP NEEDED
+/* MAP NEEDED */
 
 <<button "Next">><<set $prevpass to $passage>><<goto "GB-18">><</button>>
 
@@ -848,7 +914,7 @@ You should find yourself with water on either side of you now.
 
 Cross Mountjoy Close to the end of Wallside.
 
-PAUSE
+/* Beat */
 
 Take a few steps to the right to Thomas More House. Then a left to follow the Thomas More Highwalk.
 
@@ -858,7 +924,7 @@ To your left you should see some trees. The tops of them. Keep on straight.
 
 Ignore John Wesley Highwalk and instead continue on Thomas More to the end, then take a right onto Seddon Highwalk.
 
-PAUSE
+/* A beat */
 
 You should see Parkland to your right and hear the sound of traffic coming from your left.
 
@@ -869,6 +935,9 @@ Not anymore of course. Health and safety.
 Just after the path veers to the right, you will see, on your right, some stairs.
 
 Again, if stairs are best for you, we’ll go down there. If a ramp’s better, we’ll keep going. Just let me know.
+
+
+/*MAP NEEDED */
 
 <<button "Stairs">><<set $prevpass to $passage>><<goto "GB-19A">><</button>>
 
@@ -896,6 +965,8 @@ Now cross at a zebra crossing. Looking both ways. Let me know when you’re acro
 
 
 
+
+
 </main>
 <<include "footer">>
 
@@ -905,11 +976,9 @@ Now cross at a zebra crossing. Looking both ways. Let me know when you’re acro
 <<include "header">>
 <main>
 
-Ramp then. Keep going on Seddon
-Highwalk, following it all the way
-to the end.
+Ramp then. Keep going on Seddon Highwalk, following it all the way to the end.
 
-PAUSE
+/* Beat */
 
 You’ll find yourself on John Trundle Highwalk.
 
@@ -932,6 +1001,7 @@ Cross the street here and let me know when you’re across.
 
 
 
+
 </main>
 <<include "footer">>
 
@@ -948,6 +1018,7 @@ You should see The Sutton Arms. That’s the next location of our search into th
 Let me know when you’re inside.
 
 <<button "I'm inside the pub">><<set $prevpass to $passage>><<goto "GB-21">><</button>>
+
 
 
 
@@ -1022,7 +1093,23 @@ Ready to see if Charlie’s still here?
 
 Okay. Make sure you’re comfortable. Take a deep breath, then use your para-communicator. Let me know if you hear anything.
 
-GHOST GADGET
+<div class = "detector">
+<<set $spinning to false>>
+<<link "<img src = 'https://media3.giphy.com/media/1hpCPjWPnKpKLwAGIX/giphy.gif'>" >>
+	<<if $spinning>>
+    	<<set $spinning to false>>
+        <<audio ":all" stop>>
+		<<removeclass ".detector" "spinning">>
+    <<else>>
+   		<<set $spinning to true>>
+        <<audio "badjoke" play>>
+   	    <<addclass ".detector" "spinning">>
+    <</if>>
+<</link>> 
+</div>
+
+/* As before, the para-communicator gadget can be pressed and it
+gives white noise to start before finding the sound of someone singing drunkenly-*/
 
 ...doesn’t want to raise the rent 
 Because we have such nobby distant
@@ -1034,7 +1121,7 @@ With a ladder and some glasses
 You could see to Hackney Marshes
 If it wasn’t for the houses in between.
 
-<<button "I heard something">><<set $prevpass to $passage>><<goto "GB-24">><</button>>
+<<button "I heard something">><<audio ":all" stop>><<set $prevpass to $passage>><<goto "GB-24">><</button>>
 
 
 
@@ -1115,6 +1202,7 @@ Cross the street there. I’ll give you a moment. Let me know when you’re over
 
 
 
+
 </main>
 <<include "footer">>
 
@@ -1128,9 +1216,11 @@ Excellent. Take a left past all the bike racks towards the Shakespeare Pub. Just
 
 Passing the launderette on the right, go to the top of the ramp and let me know when you’re there.
 
-SHOW MAP
+/*MAP NEEDED*/
+
 
 <<button "I'm there">><<set $prevpass to $passage>><<goto "GB-28">><</button>>
+
 
 
 
@@ -1147,7 +1237,7 @@ Good. So you’re at Beech Gardens. From here, look away from the tube station a
 
 Go towards that.
 
-PAUSE
+/*Time for them to walk */
 
 After you’ve passed the eight trees, you should see Ben Jonson house.
 
@@ -1162,6 +1252,7 @@ When you’re right in front of that big yellow Barbican Exhibition Hall sign, t
 In the distance, you should be able to see the clock of the Cripplegate Library, with its Roman numerals.
 
 In that direction, you should see a ramp. Take that down to street level. Let me know when you’re down there.
+
 
 <<button "I'm there">><<set $prevpass to $passage>><<goto "GB-29">><</button>>
 
@@ -1199,10 +1290,10 @@ Look for a sign...
 
 A sign that reads: “Golden Lane Recreational Area”.
 
-MAP NEEDED
+/* MAP NEEDED */
 
 
-<<button "Next">><<set $prevpass to $passage>><<goto "GB-30A">><</button>>
+<<button "I'm there">><<set $prevpass to $passage>><<goto "GB-30A">><</button>>
 
 
 
@@ -1216,29 +1307,21 @@ MAP NEEDED
 <<include "header">>
 <main>
 
-Follow that sign, but remain on the
-elevated pavement on the opposite
-side of the Shakespeare.
+Follow that sign, but remain on the elevated pavement on the opposite side of the Shakespeare.
 
 You’ll get to a set of stairs.
 
-Take those if you’re able or
-continue to the ramp if that’s
-better for you.
+Take those if you’re able or continue to the ramp if that’s better for you.
 
-Either way, you’ll end up at the
-lower level. This will take you
-down to an underground level.
+Either way, you’ll end up at the lower level. This will take you down to an underground level.
 
-Take a left then a right into the
-underground carpark.
+Take a left then a right into the underground carpark.
 
-You’ll see a set of blue garage
-doors with the numbers 15 to 23.
+You’ll see a set of blue garage doors with the numbers 15 to 23.
 
 Let me know when you’re there.
 
-MAP NEEDED
+/*MAP NEEDED*/
 
 <<button "I'm there">><<set $prevpass to $passage>><<goto "GB-31A">><</button>>
 
@@ -1253,7 +1336,7 @@ MAP NEEDED
 <<include "header">>
 <main>
 
-So this estate was built in the1950s and 1960s. It took a long time. As I mentioned before this whole area was bombed very badly in the Second World War and there was a sudden need for affordable housing.
+So this estate was built in the 1950s and 1960s. It took a long time. As I mentioned before this whole area was bombed very badly in the Second World War and there was a sudden need for affordable housing.
 
 But when they first announced the plan to build this estate, the architects received a strange letter from a very respectable man (a professor at Oxford University) who warned them that this land was an ancient Anglo-Saxon burial ground and that they should cease development.
 
@@ -1298,13 +1381,31 @@ So what do you think? Shall give it a try?
 
 Activate the paracommunicator when you’re ready.
 
-GHOST DEVICE
+<div class = "detector">
+<<set $spinning to false>>
+<<link "<img src = 'https://media3.giphy.com/media/1hpCPjWPnKpKLwAGIX/giphy.gif'>" >>
+	<<if $spinning>>
+    	<<set $spinning to false>>
+        <<audio ":all" stop>>
+		<<removeclass ".detector" "spinning">>
+    <<else>>
+   		<<set $spinning to true>>
+        <<audio "badjoke" play>>
+   	    <<addclass ".detector" "spinning">>
+    <</if>>
+<</link>> 
+</div>
+
+/*This time the para-communicator won’t work. It’ll just be the
+standard white noise you get when you try it anywhere else.
+Allow the player to try it at least once then count 10
+seconds before Brian comes back. */
 
 What’s going on with this thing?
 
 Some kind of technical error. Could be the battery. You know what. I’ve got some spare batteries in the car. I’m parked nearby so I’ll go and grab them. You lot stay here, okay?
 
-<<button "Okay">><<set $prevpass to $passage>><<goto "GB-33A">><</button>>
+<<button "Okay">> <<audio ":all" stop>><<set $prevpass to $passage>><<goto "GB-33A">><</button>>
 
 
 
@@ -1320,11 +1421,17 @@ Some kind of technical error. Could be the battery. You know what. I’ve got so
 
 Great. Back in two minutes. Really sorry about this. This doesn’t usually happen.
 
-PAUSE 20s
+/*After this, wait 20 seconds.
+Then a distinct knocking comes through the headphones,
+nothing like the sounds of the other “ghosts”.
+More knocking, louder this time.
 
-KNOCKING SOUNDS, WHICH STOP
-
-PAUSE 10s
+Knocking.
+Just as it seems to be building up to something it suddenly
+stops.
+Count 10 seconds.
+Then -
+*/
 
 I actually brought the wrong batteries. Sorry about this.
 
@@ -1336,9 +1443,7 @@ Anyway hope you’ve had fun. Do tell your mates about it. I’m here every week
 
 This has been Ghosthunting with Brian. And I’d like to thank you all for opening your minds to the realm beyond.
 
-SPOOKY MUSIC
-
-<<button "Okay">><<set $prevpass to $passage>><<goto "GB-33A">><</button>>
+/*Some kind of spooky music*/
 
 
 
