@@ -512,7 +512,7 @@ You have two options:
 
 
 :: GB-05 {"position":"400,400","size":"100,100"}
-<<set $passage to "GB-05">><<set $nextpass to "">>
+<<set $passage to "GB-05">><<set $nextpassage to "GB-06">>
 <<include "header">>
 <main>
 
@@ -546,11 +546,11 @@ Now, like with fishing, there are no guarantees. I will be taking you to the pla
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-06 {"position":"525,400","size":"100,100"}
-<<set $passage to "GB-06">><<set $nextpass to "">>
+<<set $passage to "GB-06">><<set $nextpassage to "GB-07">>
 <<include "header">>
 <main>
 
@@ -581,11 +581,11 @@ You should each have one of these devices in your hands. Let me know if you don�
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-07 {"position":"650,400","size":"100,100"}
-<<set $passage to "GB-07">><<set $nextpass to "">>
+<<set $passage to "GB-07">><<set $nextpassage to "GB-08">>
 <<include "header">>
 <main>
 
@@ -599,11 +599,11 @@ Okay, let’s get going. You all ready?
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-08 {"position":"775,400","size":"100,100"}
-<<set $passage to "GB-08">><<set $nextpass to "">>
+<<set $passage to "GB-08">><<set $nextpassage to "GB-09">>
 <<include "header">>
 <main>
 
@@ -632,11 +632,11 @@ Now when we cross London Wall, look both ways for traffic. Stay safe. Very impor
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-09 {"position":"900,400","size":"100,100"}
-<<set $passage to "GB-09">><<set $nextpass to "">>
+<<set $passage to "GB-09">><<set $nextpassage to "GB-10">>
 <<include "header">>
 <main>
 
@@ -662,11 +662,11 @@ When you’re either inside or round the side, let me know and I’ll tell you t
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-10 {"position":"1025,400","size":"100,100"}
-<<set $passage to "GB-10">><<set $nextpass to "">>
+<<set $passage to "GB-10">><<set $nextpassage to "GB-11">>
 <<include "header">>
 <main>
 
@@ -715,11 +715,11 @@ Some say when the servant came to the door, there was nobody there. And that the
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-11 {"position":"1150,400","size":"100,100"}
-<<set $passage to "GB-11">><<set $nextpass to "">>
+<<set $passage to "GB-11">><<set $nextpassage to "GB-12">>
 <<include "header">>
 <main>
 
@@ -731,11 +731,11 @@ They say that when the servant opened the door, the woman was there in her weddi
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-12 {"position":"1275,400","size":"100,100"}
-<<set $passage to "GB-12">><<set $nextpass to "">>
+<<set $passage to "GB-12">><<set $nextpassage to "GB-13">>
 <<include "header">>
 <main>
 
@@ -773,11 +773,11 @@ Noooooo, my ring. My wedding ring...
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-13 {"position":"1400,400","size":"100,100"}
-<<set $passage to "GB-09">><<set $nextpass to "">>
+<<set $passage to "GB-09">><<set $nextpassage to "GB-14">>
 <<include "header">>
 <main>
 
@@ -790,11 +790,11 @@ Me too. What did you hear?
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-14 {"position":"1525,400","size":"100,100"}
-<<set $passage to "GB-14">><<set $nextpass to "">>
+<<set $passage to "GB-14">><<set $nextpassage to "GB-15">>
 <<include "header">>
 <main>
 
@@ -807,11 +807,11 @@ We don’t want to disturb her too long. We can only hope she finds rest. Now le
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-15 {"position":"1650,400","size":"100,100"}
-<<set $passage to "GB-15">><<set $nextpass to "">>
+<<set $passage to "GB-15">><<set $nextpassage to "GB-17">>
 <<include "header">>
 <main>
 
@@ -826,11 +826,11 @@ Okay. There are two options here: stairs or lift. If you can use the stairs, I�
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-16A {"position":"1775,300","size":"100,100"}
-<<set $passage to "GB-16A">><<set $nextpass to "">>
+<<set $passage to "GB-16A">><<set $nextpassage to "GB-17">>
 <<include "header">>
 <main>
 
@@ -845,11 +845,11 @@ Stairs, it is. Look for a concrete stairwell on St Giles Terrace. Opposite the W
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-16B {"position":"1775,500","size":"100,100"}
-<<set $passage to "GB-16B">><<set $nextpass to "">>
+<<set $passage to "GB-16B">><<set $nextpassage to "GB-17">>
 <<include "header">>
 <main>
 
@@ -868,11 +868,11 @@ When you leave the lift, take a left, then a quick right at the red	post-boxes t
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-17 {"position":"1900,400","size":"100,100"}
-<<set $passage to "GB-17">><<set $nextpass to "">>
+<<set $passage to "GB-17">><<set $nextpassage to "GB-18">>
 <<include "header">>
 <main>
 
@@ -898,11 +898,11 @@ On Wallside, you’ll see Cripplegate on your right. Take your time. Listen to t
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-18 {"position":"2025,400","size":"100,100"}
-<<set $passage to "GB-18">><<set $nextpass to "">>
+<<set $passage to "GB-18">><<set $nextpassage to "GB-20">>
 <<include "header">>
 <main>
 
@@ -947,11 +947,11 @@ Again, if stairs are best for you, we’ll go down there. If a ramp’s better, 
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-19A {"position":"2150,300","size":"100,100"}
-<<set $passage to "GB-19A">><<set $nextpass to "">>
+<<set $passage to "GB-19A">><<set $nextpassage to "GB-20">>
 <<include "header">>
 <main>
 
@@ -968,11 +968,11 @@ Now cross at a zebra crossing. Looking both ways. Let me know when you’re acro
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-19B {"position":"2150,500","size":"100,100"}
-<<set $passage to "GB-19B">><<set $nextpass to "">>
+<<set $passage to "GB-19B">><<set $nextpassage to "GB-20">>
 <<include "header">>
 <main>
 
@@ -1003,11 +1003,11 @@ Cross the street here and let me know when you’re across.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-20 {"position":"2275,400","size":"100,100"}
-<<set $passage to "GB-20">><<set $nextpass to "">>
+<<set $passage to "GB-20">><<set $nextpassage to "GB-21">>
 <<include "header">>
 <main>
 
@@ -1023,11 +1023,11 @@ Let me know when you’re inside.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-21 {"position":"2400,400","size":"100,100"}
-<<set $passage to "GB-21">><<set $nextpass to "">>
+<<set $passage to "GB-21">><<set $nextpassage to "GB-22">>
 <<include "header">>
 <main>
 
@@ -1043,11 +1043,11 @@ No obligation to have a drink though, of course. Whenever you’re ready to hear
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-22 {"position":"2525,400","size":"100,100"}
-<<set $passage to "GB-22">><<set $nextpass to "">>
+<<set $passage to "GB-22">><<set $nextpassage to "GB-23">>
 <<include "header">>
 <main>
 
@@ -1083,11 +1083,11 @@ Ready to see if Charlie’s still here?
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-23 {"position":"2650,400","size":"100,100"}
-<<set $passage to "GB-23">><<set $nextpass to "">>
+<<set $passage to "GB-23">><<set $nextpassage to "GB-24">>
 <<include "header">>
 <main>
 
@@ -1127,11 +1127,11 @@ If it wasn’t for the houses in between.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-24 {"position":"2775,400","size":"100,100"}
-<<set $passage to "GB-24">><<set $nextpass to "">>
+<<set $passage to "GB-24">><<set $nextpassage to "GB-25">>
 <<include "header">>
 <main>
 
@@ -1146,11 +1146,11 @@ So finish up any drinks you have and let me know when you’re outside.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-25 {"position":"2900,400","size":"100,100"}
-<<set $passage to "GB-25">><<set $nextpass to "">>
+<<set $passage to "GB-25">><<set $nextpassage to "GB-28">>
 <<include "header">>
 <main>
 
@@ -1163,11 +1163,11 @@ Okay, there are two ways we can go from here: stairs or ramp. Let me know which 
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-26A {"position":"3025,300","size":"100,100"}
-<<set $passage to "GB-26A">><<set $nextpass to "">>
+<<set $passage to "GB-26A">><<set $nextpassage to "GB-28">>
 <<include "header">>
 <main>
 
@@ -1182,11 +1182,11 @@ Now cross the walkway and let me know when you’re there.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-26B {"position":"3025,500","size":"100,100"}
-<<set $passage to "GB-26B">><<set $nextpass to "">>
+<<set $passage to "GB-26B">><<set $nextpassage to "GB-27B">>
 <<include "header">>
 <main>
 
@@ -1204,11 +1204,11 @@ Cross the street there. I’ll give you a moment. Let me know when you’re over
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-27B {"position":"3150,500","size":"100,100"}
-<<set $passage to "GB-27B">><<set $nextpass to "">>
+<<set $passage to "GB-27B">><<set $nextpassage to "">>
 <<include "header">>
 <main>
 
@@ -1229,7 +1229,7 @@ Passing the launderette on the right, go to the top of the ramp and let me know 
 
 
 :: GB-28 {"position":"3275,400","size":"100,100"}
-<<set $passage to "GB-28">><<set $nextpass to "">>
+<<set $passage to "GB-28">><<set $nextpassage to "GB-29">>
 <<include "header">>
 <main>
 
@@ -1261,16 +1261,15 @@ In that direction, you should see a ramp. Take that down to street level. Let me
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-29 {"position":"3400,400","size":"100,100"}
-<<set $passage to "GB-29">><<set $nextpass to "">>
+<<set $passage to "GB-29">><<set $nextpassage to "GB-30A">>
 <<include "header">>
 <main>
 
-This is old Cripplegate Free
-Library on Golden Lane.
+This is old Cripplegate Free Library on Golden Lane.
 
 It’s boarded up unfortunately. It’s a pity as there’s certain to be strong psychic energy in a place like that.
 
@@ -1299,11 +1298,11 @@ A sign that reads: “Golden Lane Recreational Area”.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-30A {"position":"3525,400","size":"100,100"}
-<<set $passage to "GB-30A">><<set $nextpass to "">>
+<<set $passage to "GB-30A">><<set $nextpassage to "GB-31A">>
 <<include "header">>
 <main>
 
@@ -1328,11 +1327,11 @@ Let me know when you’re there.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-31A {"position":"3650,400","size":"100,100"}
-<<set $passage to "GB-31A">><<set $nextpass to "">>
+<<set $passage to "GB-31A">><<set $nextpassage to "GB-32A">>
 <<include "header">>
 <main>
 
@@ -1371,11 +1370,11 @@ So what do you think? Shall give it a try?
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-32A {"position":"3775,400","size":"100,100"}
-<<set $passage to "GB-32A">><<set $nextpass to "">>
+<<set $passage to "GB-32A">><<set $nextpassage to "GB-33A">>
 <<include "header">>
 <main>
 
@@ -1411,11 +1410,11 @@ Some kind of technical error. Could be the battery. You know what. I’ve got so
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: GB-33A {"position":"3900,400","size":"100,100"}
-<<set $passage to "GB-33A">><<set $nextpass to "">>
+<<set $passage to "GB-33A">><<set $nextpassage to "end">>
 <<include "header">>
 <main>
 
@@ -1445,10 +1444,29 @@ This has been Ghosthunting with Brian. And I’d like to thank you all for openi
 
 /*Some kind of spooky music*/
 
-
+<<timed 3s>><<set $prevpass to $passage>><<goto "end">><</timed>>
 
 
 </main>
+<<include "footer2">>
+
+
+:: end {"position":"100,625","size":"100,100"}
+<main>
+
+End location
+
+  
+</main>
 <<include "footer">>
+
+
+:: footer2 {"position":"100,500","size":"100,100"}
+<footer>
+<div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
+<div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div>
+<div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div>
+<div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
+</footer>
 
 
