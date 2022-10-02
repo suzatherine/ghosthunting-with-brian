@@ -4,7 +4,7 @@ Ghosthunting with Brian
 
 :: StoryData
 {
-	"ifid": "22353D7A-5C3E-4DF2-82CF-9DE14881F05A",
+	"ifid": "22353D7A-5C3E-4DF2-81CF-9DE14881F05A",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
 	"start": "landing",
@@ -160,17 +160,17 @@ button{
 }
 
 button:hover{
-	background-color:#cf1b98;
+	background-color:#ea9e25;
 	border: #fff 1px solid;
 	color: #fff;
 }
 
 a {
-  color: #f2647d;
+  color:#ea9e25;;
 }
 
 a:active {
-  background-color: #f2647d;
+  background-color: #ea9e25;;
 }
 
 a:hover {
@@ -187,10 +187,13 @@ a:hover {
 
 /* GENERAL STYLES */
 body{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   font-family: "Space Grotesk";
+  color:#fff;
+  /* color:#000; */
   overflow:scroll;
-  background:#000;
+  background: #1c8f93;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
@@ -205,18 +208,20 @@ header{
 
 main{
    padding: 2rem;
-   margin-block-end: 4rem
+   margin-block-end: 10rem
 }
+
+/* FOOTER  */
 
 footer{
    display:flex;
   justify-content: space-between;
-  align-items: flex-end; 
+align-items: end;
   position:fixed;
   bottom: 0;
   padding: 2rem;
   width: 100%;
-  background-color: #000
+background: #1c8f93;
 }
 
 nav{
@@ -235,17 +240,32 @@ align-items: flex-end
 }
 
 .nav-item{
-  margin-block-end: 1.5rem
+  margin-block-end: 0.5rem;
+  width:100%;
+  display:flex
 }
 
-.nav-item:last-child{
-  margin-block-end: 0
+.nav-item.replay, .nav-item.end{
+justify-content: center
+}
+.nav-item.replay, .nav-item.forward{
+justify-content: end
 }
 
+.nav-item.replay, .nav-item.back{
+justify-content: start
+}
 
-.nav-wrapper:last-child{
-display:flex;
-align-items: flex-end
+.nav-item.forward > button, 
+.nav-item.back > button{
+  font-size:2rem
+}
+footer > button:first-child,  {
+  font-size:2rem
+}
+
+.nav-item > button{
+ font-size: 1.3rem
 }
 
 .menu-wrapper{
@@ -260,26 +280,6 @@ margin-inline-end: 10px;
 margin-block-end: 10px
 }
 
-.door-container{
-  display:flex;
-  flex-direction: row;
-justify-content: space-around;
-  align-items:center;
-  text-align: right;
-}
-
-.door-item{
-  display:flex;
-  flex-direction:column
-}
-
-.door-item > button > img {
-  max-width: 7rem
-}
-
-.door-item > span {
-  text-align: center
-}
 
 textarea{
   min-width: 60vw
@@ -304,6 +304,7 @@ textarea{
 
 .detector{
  width: 50%;
+margin: auto;
 }
 
 .spinning{
@@ -416,15 +417,17 @@ $(document.head).find('#style-ui-bar').remove();
 
 // MAKE MAP FUNCTION
 
-setup.generateDirectionsMap = function (latorg, longorg, latdest, longdest){
+setup.generateDirectionsMap = function (origin, dest){
 const iFrame = document.createElement("iframe")
 iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${latorg},${longorg}&zoom=17&origin=${latorg},${longorg}&destination=${latdest},${longdest}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=17&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
+console.log(iFrame)
 return iFrame
+// this.mapMount.appendChild(iFrame)
 }
 
 //Get random 5 letter word
@@ -448,39 +451,80 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "badjoke" "https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3">>
+<<cacheaudio "GB_05" "./assets/audio/GB_05.mp3">>
+<<cacheaudio "GB_06" "./assets/audio/GB_06.mp3">>
+<<cacheaudio "GB_07" "./assets/audio/GB_07.mp3">>
+<<cacheaudio "GB_08" "./assets/audio/GB_08.mp3">>
+<<cacheaudio "GB_09" "./assets/audio/GB_09.mp3">>
+<<cacheaudio "GB_10" "./assets/audio/GB_10.mp3">>
+<<cacheaudio "GB_10A" "./assets/audio/GB_10A.mp3">>
+<<cacheaudio "GB_11" "./assets/audio/GB_11.mp3">>
+<<cacheaudio "GB_12" "./assets/audio/GB_12.mp3">>
+<<cacheaudio "GB_13" "./assets/audio/GB_13.mp3">>
+<<cacheaudio "GB_14" "./assets/audio/GB_14.mp3">>
+<<cacheaudio "GB_15" "./assets/audio/GB_15.mp3">>
+<<cacheaudio "GB_16A" "./assets/audio/GB_16A.mp3">>
+<<cacheaudio "GB_16B" "./assets/audio/GB_16B.mp3">>
+<<cacheaudio "GB_17" "./assets/audio/GB_17.mp3">>
+<<cacheaudio "GB_20" "./assets/audio/GB_20.mp3">>
+<<cacheaudio "GB_21" "./assets/audio/GB_21.mp3">>
+<<cacheaudio "GB_22" "./assets/audio/GB_22.mp3">>
+<<cacheaudio "GB_23" "./assets/audio/GB_23.mp3">>
+<<cacheaudio "GB_24" "./assets/audio/GB_24.mp3">>
+<<cacheaudio "GB_25" "./assets/audio/GB_25.mp3">>
+<<cacheaudio "GB_26A" "./assets/audio/GB_26A.mp3">>
+<<cacheaudio "GB_26B" "./assets/audio/GB_26B.mp3">>
+<<cacheaudio "GB_27B" "./assets/audio/GB_27B.mp3">>
+<<cacheaudio "GB_28" "./assets/audio/GB_28.mp3">>
+<<cacheaudio "GB_29" "./assets/audio/GB_29.mp3">>
+<<cacheaudio "GB_30" "./assets/audio/GB_30.mp3">>
+<<cacheaudio "GB_31" "./assets/audio/GB_31.mp3">>
+<<cacheaudio "GB_32" "./assets/audio/GB_32.mp3">>
+<<cacheaudio "GB_33" "./assets/audio/GB_33.mp3">>
+<<cacheaudio "ghost_charlie" "./assets/audio/ghost_charlie.mp3">>
+<<cacheaudio "ghost_myweddingring" "./assets/audio/ghost_myweddingring.mp3">>
+<<cacheaudio "whitenoise_short_1" "./assets/audio/whitenoise_short_1.mp3">>
+<<cacheaudio "whitenoise_short_2" "./assets/audio/whitenoise_short_2.mp3">>
+<<cacheaudio "whitenoise_short_3" "./assets/audio/whitenoise_short_3.mp3">>
+<<cacheaudio "whitenoise_short_4" "./assets/audio/whitenoise_short_4.mp3">>
+<<cacheaudio "whitenoise_short_5" "./assets/audio/whitenoise_short_5.mp3">>
+<<cacheaudio "whitenoise_short_6" "./assets/audio/whotenoise_short_6.mp3">>
+
 <<waitforaudio>>
 
 
 :: header {"position":"100,225","size":"100,100"}
-<header>Adventure Functionality /
- Structure Template</header>
+<header>Ghost Hunting with Brian</header>
 
 
 :: footer {"position":"100,375","size":"100,100"}
-<footer><div class="nav-wrapper "><div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "I'm lost">><<goto "lost">><</button>></div></div></footer>
+<footer>
+<div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
+<div class="nav-item replay"><<button "Replay">><<goto $passage>><</button>> </div>
+<div class="nav-item end"><<button "Take me to the end">><<set $prevpass to $passage>><<goto "lost">><</button>></div>
+<div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
+</footer>
 
 
 :: lost {"position":"525,50","size":"100,100"}
-<<set $passage to "lost">><<include "header">>
+<<set $passage to "lost">>
 <main>
-Sorry to hear that you're lost! 
 You have two options:
 
-<<button "Begin the adventure again">><<goto "landing">><</button>>
+<div class="menu-wrapper">
+  <<button "Begin the adventure again">><<goto "landing">><</button>>
 
-<<button "Take me straight to the end location!">><<goto "end">><</button>>
+  <<button "Take me straight to the end location!">><<goto "end">><</button>>
+</div>
 </main>
 <<include "footer">>
 
 
 :: landing {"position":"375,50","size":"100,100"}
 <<set $passage to "landing">>
-<<include "header">>
 <main>
 
 <<button "start">><<goto "GB-05">><</button>>
-
 
 </main>
 <<include "footer">>
@@ -488,7 +532,6 @@ You have two options:
 
 :: ghostdetector {"position":"925,100","size":"100,100"}
 <<set $passage to "badchoices">>
-<<include "header">>
 <main>
 
   <div class = "detector">
@@ -512,12 +555,9 @@ You have two options:
 
 
 :: GB-05 {"position":"400,400","size":"100,100"}
-<<set $passage to "GB-05">><<set $nextpassage to "GB-06">>
-<<include "header">>
+<<set $passage to "GB-05">><<set $nextpassage to "GB-06">><<audio ":all" stop>><<audio "GB_05" play>>
 <main>
-
-/*Creepy music*/
-
+<div id="mount"></div>
 You saw the flyers then?
 
 The flyers? I left them in all the pubs round here.
@@ -550,33 +590,32 @@ Now, like with fishing, there are no guarantees. I will be taking you to the pla
 
 
 :: GB-06 {"position":"525,400","size":"100,100"}
-<<set $passage to "GB-06">><<set $nextpassage to "GB-07">>
-<<include "header">>
-<main>
+<<set $passage to "GB-06">><<set $nextpassage to "GB-07">><<audio ":all" stop>><<audio "GB_06" play>>
+<main><div id="mount"></div>
 
-Next, we’ll be using state-of-the-art para-communication technology to help us pick up signals from the other side. Sometimes a ghost can be seen or heard by the naked eye or ear but this only happens when there is a very strong energy or if a person has a particular sensitivity. For most of us, we’ll need this communication device.
+<<timed 0.5s>><<replace "#mount">><<type 50ms>>Next, we'll be using a state of the art para-communication technology to help us pick up signals from the other side. <</type>><</replace>><</timed>>
+<<timed 10s>><<replace "#mount">><<type 50ms>>Sometimes the ghost can be seen or heard by the naked eye or ear. <</type>><</replace>><</timed>>
+<<timed 16s>><<replace "#mount">><<type 50ms>>But this only happens when there is a very strong energy or... if the person has a particular sensitivity. <</type>><</replace>><</timed>>
+<<timed 24s>><<replace "#mount">><<type 50ms>>For most of us, we'll need this communication device. <</type>><</replace>><</timed>>
 
-You should each have one of these devices in your hands. Let me know if you don’t and I’ll make sure you get one.
-
-/*ghost audio should be replaced with white noise */
-
-<div class = "detector">
+<<timed 29s>><<replace "#mount">><div class = "detector">
 <<set $spinning to false>>
 <<link "<img src = 'https://media3.giphy.com/media/1hpCPjWPnKpKLwAGIX/giphy.gif'>" >>
 	<<if $spinning>>
     	<<set $spinning to false>>
-        <<audio ":all" stop>>
+        <<audio "whitenoise_short_1" stop>>
 		<<removeclass ".detector" "spinning">>
     <<else>>
    		<<set $spinning to true>>
-        <<audio "badjoke" play>>
+        <<audio "whitenoise_short_1" play>>
    	    <<addclass ".detector" "spinning">>
     <</if>>
 <</link>> 
 </div>
 
-<<button "Got it">><<set $prevpass to $passage>><<goto "GB-07">><</button>>
 
+<<button "Got it">><<set $prevpass to $passage>><<goto "GB-07">><</button>>
+<</replace>><</timed>>
 
 
 
@@ -585,28 +624,21 @@ You should each have one of these devices in your hands. Let me know if you don�
 
 
 :: GB-07 {"position":"650,400","size":"100,100"}
-<<set $passage to "GB-07">><<set $nextpassage to "GB-08">>
-<<include "header">>
+<<set $passage to "GB-07">><<set $nextpassage to "GB-08">><<audio ":all" stop>><<audio "GB_07" play>>
 <main>
-
+<div id="mount"></div>
 Good. Don’t use it now! I’ll let you know when there’s a presence nearby. Don’t want them running out of batteries.
 
 Okay, let’s get going. You all ready?
 
 <<button "Ready">><<set $prevpass to $passage>><<goto "GB-08">><</button>>
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-08 {"position":"775,400","size":"100,100"}
-<<set $passage to "GB-08">><<set $nextpassage to "GB-09">>
-<<include "header">>
-<main>
-
+<<set $passage to "GB-08">><<set $nextpassage to "GB-09">><<set $map1 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<audio ":all" stop>><<audio "GB_08" play>><main><div id="mount"></div>
 The hunting begins!
 
 Look for some brightly coloured vents and head in that direction, passing some large metal pillars. You’re coming onto Wood Street.
@@ -624,22 +656,19 @@ Alright. Opposite direction. Up to London Wall.
 
 Now when we cross London Wall, look both ways for traffic. Stay safe. Very important. I know sometimes people get overexcited. But the ghosts aren’t going anywhere. That’s their whole thing.
 
+$map1
 /*MAP NEEDED*/
 
 <<button "I made it across">><<set $prevpass to $passage>><<goto "GB-09">><</button>>
-
-
-
 
 </main>
 <<include "footer2">>
 
 
 :: GB-09 {"position":"900,400","size":"100,100"}
-<<set $passage to "GB-09">><<set $nextpassage to "GB-10">>
-<<include "header">>
+<<set $passage to "GB-09">><<set $nextpassage to "GB-10">><<audio ":all" stop>><<audio "GB_09" play>>
 <main>
-
+<div id="mount"></div>
 Right, now that we’re safely across, keep going straight.
 
 There! Right up ahead. A sign...
@@ -658,18 +687,14 @@ When you’re either inside or round the side, let me know and I’ll tell you t
 
 <<button "I'm ready">><<set $prevpass to $passage>><<goto "GB-10">><</button>>
 
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-10 {"position":"1025,400","size":"100,100"}
-<<set $passage to "GB-10">><<set $nextpassage to "GB-11">>
-<<include "header">>
+<<set $passage to "GB-10">><<set $nextpassage to "GB-11">><<audio ":all" stop>><<audio "GB_10" play>>
 <main>
-
+<div id="mount"></div>
 Welcome to St Giles without Cripplegate, more commonly known these days as St Giles Cripplegate. There’s been a church on this site since the 11th Century but it was rebuilt in the 14th. This makes it one of the very few Medieval churches remaining in the City of London. If you take a look around, you’ll see John Milton, author of Paradise Lost, is buried here.
 
 So what we’ve got is a very, very old church and, over the centuries, as you’d expect, there have been some unusual goings on.
@@ -698,106 +723,83 @@ There are different accounts of what happened next. What we do know is that same
 
 Some say when the servant came to the door, there was nobody there. And that the woman was given a funeral as planned. Do you believe that?
 
-<div class= "GB-11-button1">
-	<<button "Yes that sounds believable.">>
-    <<replace ".GB-11-button2">><</replace>>
-    <<replace ".GB-11-button1">><span style="color:grey;">I like that version too. </span><</replace>>
-  	<<timed 5s>><<set $prevpass to $passage>><<goto "GB-12">><</timed>>
-<</button>>
-</div>
-<div class = "GB-11-button2">
-<<button "What do other people say?">><<set $prevpass to $passage>><<goto "GB-11">><</button>>
-</div>
-
-
-
-
-
-
+<div class="menu-wrapper">
+  	<<button "Yes that sounds believable.">>
+      <<replace "#mount">>
+      <<audio ":all" stop>><<audio "GB_10A" play>>
+      <<type 50ms>>I like that version too.<</type>><</replace>>
+    	<<timed 6s>><<set $prevpass to $passage>><<goto "GB-12">><</timed>>
+  <</button>>
+  <<button "What do other people say?">><<set $prevpass to $passage>><<goto "GB-11">><</button>>
+  </div>
 </main>
 <<include "footer2">>
 
 
 :: GB-11 {"position":"1150,400","size":"100,100"}
-<<set $passage to "GB-11">><<set $nextpassage to "GB-12">>
-<<include "header">>
+<<set $passage to "GB-11">><<set $nextpassage to "GB-12">><<audio ":all" stop>><<audio "GB_11" play>>
 <main>
-
+<div id="mount"></div>
 They say that when the servant opened the door, the woman was there in her wedding dress with her ring and her bleeding finger. That the servant ran away in fear and the husband came to the door. At first he thought she was a ghost but then she spoke and he realised that his wife was still alive. By stabbing her with the knife to steal her ring, the thief had brought her back to the world of the living. She and her husband had a long and happy life together but the thief was haunted by that moment until the end of his days.
 
 <<button "Next">><<set $prevpass to $passage>><<goto "GB-12">><</button>>
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-12 {"position":"1275,400","size":"100,100"}
-<<set $passage to "GB-12">><<set $nextpassage to "GB-13">>
-<<include "header">>
-<main>
+<<set $passage to "GB-12">><<set $nextpassage to "GB-13">><<audio ":all" stop>><<audio "GB_12" play>>
 
-Whatever the truth, there’s said to be a strange energy about this church. Unexplained noises and cold drafts.
+<main><div id="mount"></div>  
+<div id="device"></div>  
+<<timed 1s>><<replace "#mount">><<type 50ms>>Whatever the truth, there is said to be a strange energy about this church. <</type>><</replace>><</timed>>
+  
+<<timed 8s>><<replace "#mount">><<type 50ms>>Unexplained noises and cold drafts. <</type>><</replace>><</timed>>
+  
+<<timed 14s>><<replace "#mount">><<type 50ms>>Let's try the para-communicator. <</type>><</replace>><</timed>>
+  
+<<timed 17s>><<replace "#mount">><<type 50ms>>If you're outside the church, just get as close as you can to the walls. <</type>><</replace>><</timed>>
 
-Let’s try the Paracommunicator. If you’re outside the church, just get as close as you can to the walls. Let me know what you hear.
-
-<div class = "detector">
-<<set $spinning to false>>
-<<link "<img src = 'https://media3.giphy.com/media/1hpCPjWPnKpKLwAGIX/giphy.gif'>" >>
+<<timed 24s>><<replace "#mount">><<type 50ms>>Let me know what you can hear.<</type>><</replace>><</timed>><<timed 26s>><<replace "#device">><div class = "detector"><<set $spinning to false>><<link "<img src = 'https://media3.giphy.com/media/1hpCPjWPnKpKLwAGIX/giphy.gif'>" >>
 	<<if $spinning>>
     	<<set $spinning to false>>
         <<audio ":all" stop>>
 		<<removeclass ".detector" "spinning">>
     <<else>>
    		<<set $spinning to true>>
-        <<audio "badjoke" play>>
+      <<replace "#mount">><</replace>>
+        <<audio "ghost_myweddingring" play>>
+        <<timed 10s>><<replace "#mount">><<type 300ms>>Nooooooooo<</type>><</replace>><</timed>>
+        <<timed 15s>><<replace "#mount">><<type 50ms>>My ring! <</type>><</replace>><</timed>>
+         <<timed 17s>><<replace "#mount">><<type 50ms>> My wedding ring...<</type>><</replace>><</timed>>
    	    <<addclass ".detector" "spinning">>
     <</if>>
 <</link>> 
 </div>
 
-/*The Para-communicator, which has just delivered white noise,
-when clicked on up to now, will start by delivering white
-noise (at a slightly different pitch to indicate that
-something has changed) before it “tunes into a sound”. A
-woman’s voice, ghostly, incomprehensible at first, but
-gradually clarifying into - */
 
-Noooooo, my ring. My wedding ring...
-
-<<button "I heard something.">><<set $prevpass to $passage>><<goto "GB-13">><</button>>
-
-
-
-
+<<timed 3s>><<button "I heard something.">><<set $prevpass to $passage>><<goto "GB-13">><</button>><</timed>><</replace>>
+<</timed>>
 </main>
 <<include "footer2">>
 
 
 :: GB-13 {"position":"1400,400","size":"100,100"}
-<<set $passage to "GB-09">><<set $nextpassage to "GB-14">>
-<<include "header">>
-<main>
+<<set $passage to "GB-13">><<set $nextpassage to "GB-14">><<audio ":all" stop>><<audio "GB_13" play>><main>
+<div id="mount"></div>  
 
-Me too. What did you hear?
+<<timed 0.5s>><<replace "#mount">><<type 50ms>>Me too. What did you hear?<</type>><</replace>><</timed>>
 
-
-<<button 'She said "No, my ring. My wedding ring."'>><<set $prevpass to $passage>><<goto "GB-14">><</button>>
-
-
-
+<<timed 4s>><<button 'She said "No, my ring. My wedding ring."'>><<set $prevpass to $passage>><<goto "GB-14">><</button>><</timed>>
 
 </main>
 <<include "footer2">>
 
 
 :: GB-14 {"position":"1525,400","size":"100,100"}
-<<set $passage to "GB-14">><<set $nextpassage to "GB-15">>
-<<include "header">>
+<<set $passage to "GB-14">><<set $nextpassage to "GB-15">><<audio ":all" stop>><<audio "GB_14" play>>
 <main>
-
+<div id="mount"></div>  
 Yes! That’s what I heard too. Just like in the story. Incredible. Such a powerful device!
 
 We don’t want to disturb her too long. We can only hope she finds rest. Now let’s get away from this place. Let me know when you’re ready to continue our tour.
@@ -811,71 +813,52 @@ We don’t want to disturb her too long. We can only hope she finds rest. Now le
 
 
 :: GB-15 {"position":"1650,400","size":"100,100"}
-<<set $passage to "GB-15">><<set $nextpassage to "GB-17">>
-<<include "header">>
+<<set $passage to "GB-15">><<set $nextpassage to $passage>><<audio ":all" stop>><<audio "GB_15" play>>
 <main>
-
+<div id="mount"></div>  
 Okay. There are two options here: stairs or lift. If you can use the stairs, I’d recommend that to avoid overcrowding in the lift.
 
-<<button "stairs">><<set $prevpass to $passage>><<goto "GB-16A">><</button>>
-
-<<button "lift">><<set $prevpass to $passage>><<goto "GB-16B">><</button>>
-
-
-
-
-
+<div class="menu-wrapper">
+  <<button "stairs">><<set $prevpass to $passage>><<goto "GB-16A">><</button>>
+  <<button "lift">><<set $prevpass to $passage>><<goto "GB-16B">><</button>>
+</div>
 </main>
 <<include "footer2">>
 
 
 :: GB-16A {"position":"1775,300","size":"100,100"}
-<<set $passage to "GB-16A">><<set $nextpassage to "GB-17">>
-<<include "header">>
+<<set $passage to "GB-16A">><<set $nextpassage to "GB-17">><<audio ":all" stop>><<audio "GB_16A" play>>
 <main>
-
+<div id="mount"></div>  
 Stairs, it is. Look for a concrete stairwell on St Giles Terrace. Opposite the Wood Street Bar and Restaurant. Go up there. It’ll lead to the new Barbican complex. Built in 1982.
 
 Stairs, it is. Look for a concrete stairwell on St Giles Terrace. Opposite the Wood Street Bar and Restaurant. Go up there. It’ll lead to the new Barbican complex. Built in 1982.
 
 <<button "I'm at the top">><<set $prevpass to $passage>><<goto "GB-17">><</button>>
 
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-16B {"position":"1775,500","size":"100,100"}
-<<set $passage to "GB-16B">><<set $nextpassage to "GB-17">>
-<<include "header">>
+<<set $passage to "GB-16B">><<set $nextpassage to "GB-17">><<audio ":all" stop>><<audio "GB_16B" play>>
 <main>
-
+<div id="mount"></div>  
 Make sure you’re on St Giles Terrace facing away from the
 church. Look for a bright yellow CCTV sign in a concrete doorway. Go over to that and you’ll find the lift.
 
 When you're inside go up to level P for Podium.
 
-/*Beat to give them time to get up.*/
-
 When you leave the lift, take a left, then a quick right at the red	post-boxes to The Postern. Stop at	the top of the stairwell and let me	know you’re there.
 
 <<button "I'm there">><<set $prevpass to $passage>><<goto "GB-17">><</button>>
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-17 {"position":"1900,400","size":"100,100"}
-<<set $passage to "GB-17">><<set $nextpassage to "GB-18">>
-<<include "header">>
-<main>
-
+<<set $passage to "GB-17">><<set $nextpassage to "GB-18">><<set $map2 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>><<audio "GB_17" play>><main>
+<div id="mount"></div>  
 Bingo! You’ll see signs pointing to the Barbican Centre but we want to go the other, towards Barbican tube station and Wallside.
 
 These are the Barbican highwalks. In the future, all cities will be like this.
@@ -888,24 +871,17 @@ Keep your eyes peeled for the right turn onto Wallside, just before the benches.
 
 On Wallside, you’ll see Cripplegate on your right. Take your time. Listen to the water. To the voices. There are many echoes here. Are they all of the living? We might never know...
 
-/* Some time for them to walk. Music. */
-
-/* MAP NEEDED */
+$map2
 
 <<button "Next">><<set $prevpass to $passage>><<goto "GB-18">><</button>>
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-18 {"position":"2025,400","size":"100,100"}
-<<set $passage to "GB-18">><<set $nextpassage to "GB-20">>
-<<include "header">>
-<main>
-
+<<set $passage to "GB-18">><<set $nextpassage to $passage>><<set $map3 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>>
+/* TODO MISSING AUDIO <<audio "GB_18" play>> */
+<main><div id="mount"></div> 
 Soon, you’ll come to a lonely brown chair with the words “City of London” on it.
 
 What’s that chair doing? Who put it there and why? This place is full of mysteries...
@@ -914,8 +890,6 @@ You should find yourself with water on either side of you now.
 
 Cross Mountjoy Close to the end of Wallside.
 
-/* Beat */
-
 Take a few steps to the right to Thomas More House. Then a left to follow the Thomas More Highwalk.
 
 Thomas More, of course, author of Thomas More’s Utopia.
@@ -923,8 +897,6 @@ Thomas More, of course, author of Thomas More’s Utopia.
 To your left you should see some trees. The tops of them. Keep on straight.
 
 Ignore John Wesley Highwalk and instead continue on Thomas More to the end, then take a right onto Seddon Highwalk.
-
-/* A beat */
 
 You should see Parkland to your right and hear the sound of traffic coming from your left.
 
@@ -936,25 +908,21 @@ Just after the path veers to the right, you will see, on your right, some stairs
 
 Again, if stairs are best for you, we’ll go down there. If a ramp’s better, we’ll keep going. Just let me know.
 
+$map3
 
-/*MAP NEEDED */
-
-<<button "Stairs">><<set $prevpass to $passage>><<goto "GB-19A">><</button>>
-
-<<button "Ramp">><<set $prevpass to $passage>><<goto "GB-19B">><</button>>
-
-
-
-
+<div class="menu-wrapper">
+  <<button "Stairs">><<set $prevpass to $passage>><<goto "GB-19A">><</button>>
+  <<button "Ramp">><<set $prevpass to $passage>><<goto "GB-19B">><</button>>
+</div>
 </main>
 <<include "footer2">>
 
 
 :: GB-19A {"position":"2150,300","size":"100,100"}
-<<set $passage to "GB-19A">><<set $nextpassage to "GB-20">>
-<<include "header">>
+<<set $passage to "GB-19A">><<set $nextpassage to "GB-20">><<audio ":all" stop>>
+/* TODO MISSING AUDIO <<audio "GB_19A" play>> */
 <main>
-
+<div id="mount"></div> 
 Stairs it is. At the top of those stairs, there’ll be a sign saying “to street level”. Go down there.
 
 When you get down, find your way onto Beech Street and take a left. You should see Barbican tube station.
@@ -963,22 +931,16 @@ Now cross at a zebra crossing. Looking both ways. Let me know when you’re acro
 
 <<button "I'm across">><<set $prevpass to $passage>><<goto "GB-20">><</button>>
 
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-19B {"position":"2150,500","size":"100,100"}
-<<set $passage to "GB-19B">><<set $nextpassage to "GB-20">>
-<<include "header">>
+<<set $passage to "GB-19B">><<set $nextpassage to "GB-20">><<audio ":all" stop>>
+/* TODO MISSING AUDIO <<audio "GB_19B" play>> */
 <main>
-
+<div id="mount"></div> 
 Ramp then. Keep going on Seddon Highwalk, following it all the way to the end.
-
-/* Beat */
 
 You’ll find yourself on John Trundle Highwalk.
 
@@ -998,19 +960,14 @@ Cross the street here and let me know when you’re across.
 
 <<button "I'm across">><<set $prevpass to $passage>><<goto "GB-20">><</button>>
 
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-20 {"position":"2275,400","size":"100,100"}
-<<set $passage to "GB-20">><<set $nextpassage to "GB-21">>
-<<include "header">>
+<<set $passage to "GB-20">><<set $nextpassage to "GB-21">><<audio ":all" stop>><<audio "GB_20" play>>
 <main>
-
+<div id="mount"></div> 
 Good. Head right passing the front of the tube station and then take a left onto Carthusian Street.
 
 You should see The Sutton Arms. That’s the next location of our search into the realm of the paranormal.
@@ -1018,19 +975,13 @@ You should see The Sutton Arms. That’s the next location of our search into th
 Let me know when you’re inside.
 
 <<button "I'm inside the pub">><<set $prevpass to $passage>><<goto "GB-21">><</button>>
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-21 {"position":"2400,400","size":"100,100"}
-<<set $passage to "GB-21">><<set $nextpassage to "GB-22">>
-<<include "header">>
-<main>
-
+<<set $passage to "GB-21">><<set $nextpassage to "GB-22">><<audio ":all" stop>><<audio "GB_21" play>>
+<main><div id="mount"></div> 
 Now I like to stop off in a pub during these tours so everyone can wet their whistle. So I’ll give you a chance to get a drink before I tell you about the ghostly presence here, if you like.
 
 I don’t want you getting too scared to have a drink. Plus the landlady here’s offering a 10% discount to anyone who says they’re on Ghosthunting with Brian.
@@ -1038,19 +989,13 @@ I don’t want you getting too scared to have a drink. Plus the landlady here’
 No obligation to have a drink though, of course. Whenever you’re ready to hear more, just let me know.
 
 <<button "Tell me about the ghost">><<set $prevpass to $passage>><<goto "GB-22">><</button>>
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-22 {"position":"2525,400","size":"100,100"}
-<<set $passage to "GB-22">><<set $nextpassage to "GB-23">>
-<<include "header">>
-<main>
-
+<<set $passage to "GB-22">><<set $nextpassage to "GB-23">><<audio ":all" stop>><<audio "GB_22" play>><main>
+<div id="mount"></div> 
 As you can see, this feels like a proper little local and it has its very loyal regulars.
 
 One of these regulars has proven to be more loyal than most though.
@@ -1087,12 +1032,13 @@ Ready to see if Charlie’s still here?
 
 
 :: GB-23 {"position":"2650,400","size":"100,100"}
-<<set $passage to "GB-23">><<set $nextpassage to "GB-24">>
-<<include "header">>
+<<set $passage to "GB-23">><<set $nextpassage to "GB-24">><<audio ":all" stop>><<audio "GB_23" play>>
 <main>
-
-Okay. Make sure you’re comfortable. Take a deep breath, then use your para-communicator. Let me know if you hear anything.
-
+<div id="mount"></div> 
+<div id="device"></div> 
+<<timed 0.5s>><<replace "#mount">><<type 50ms>>Okay. Make sure you’re comfortable. Take a deep breath, then use your para-communicator. <</type>><</replace>><</timed>>
+<<timed 10s>><<replace "#mount">><<type 50ms>>Let me know if you hear anything. <</type>><</replace>><</timed>>
+<<timed 13s>><<replace "#device">>
 <div class = "detector">
 <<set $spinning to false>>
 <<link "<img src = 'https://media3.giphy.com/media/1hpCPjWPnKpKLwAGIX/giphy.gif'>" >>
@@ -1102,26 +1048,22 @@ Okay. Make sure you’re comfortable. Take a deep breath, then use your para-com
 		<<removeclass ".detector" "spinning">>
     <<else>>
    		<<set $spinning to true>>
-        <<audio "badjoke" play>>
+      <<replace "#mount">><</replace>>
+        <<audio "ghost_charlie" play>>
    	    <<addclass ".detector" "spinning">>
+<<timed 21s>><<replace "#mount">><<type 50ms>>...doesn’t want to raise the rent... <</type>><</replace>><</timed>> 
+<<timed 24s>><<replace "#mount">><<type 50ms>>...because we have such nobby distant views... <</type>><</replace>><</timed>>
+<<timed 29s>><<replace "#mount">><<type 50ms>>Oh it really is a very pretty garden<</type>><</replace>><</timed>>
+<<timed 34s>><<replace "#mount">><<type 50ms>>And Chingford to the Eastward could be seen<</type>><</replace>><</timed>>
+<<timed 38s>><<replace "#mount">><<type 40ms>>With a ladder and some glasses<</type>><</replace>><</timed>>
+<<timed 41s>><<replace "#mount">><<type 40ms>>You could see to Hackney Marshes<</type>><</replace>><</timed>>
+<<timed 43s>><<replace "#mount">><<type 50ms>>If it wasn’t for the houses in between. <</type>><</replace>><</timed>>
     <</if>>
 <</link>> 
 </div>
-
-/* As before, the para-communicator gadget can be pressed and it
-gives white noise to start before finding the sound of someone singing drunkenly-*/
-
-...doesn’t want to raise the rent 
-Because we have such nobby distant
-views.
-
-Oh it really is a very pretty garden
-And Chingford to the Eastward could be seen
-With a ladder and some glasses
-You could see to Hackney Marshes
-If it wasn’t for the houses in between.
-
 <<button "I heard something">><<audio ":all" stop>><<set $prevpass to $passage>><<goto "GB-24">><</button>>
+<</replace>><</timed>>
+
 
 
 
@@ -1131,10 +1073,9 @@ If it wasn’t for the houses in between.
 
 
 :: GB-24 {"position":"2775,400","size":"100,100"}
-<<set $passage to "GB-24">><<set $nextpassage to "GB-25">>
-<<include "header">>
+<<set $passage to "GB-24">><<set $nextpassage to "GB-25">><<audio ":all" stop>><<audio "GB_24" play>>
 <main>
-
+<div id="mount"></div> 
 What a sing-song, eh? Charlie’s still in good spirits, it seems.
 
 We can’t hang about with him all day though. There’s one more ghost out there in the City to show you.
@@ -1143,32 +1084,27 @@ So finish up any drinks you have and let me know when you’re outside.
 
 <<button "I'm outside the pub">><<set $prevpass to $passage>><<goto "GB-25">><</button>>
 
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-25 {"position":"2900,400","size":"100,100"}
-<<set $passage to "GB-25">><<set $nextpassage to "GB-28">>
-<<include "header">>
+<<set $passage to "GB-25">><<set $nextpassage to "GB-28">><<audio ":all" stop>><<audio "GB_25" play>>
 <main>
-
+<div id="mount"></div> 
 Okay, there are two ways we can go from here: stairs or ramp. Let me know which one you’re going for.
 
-<<button "Stairs">><<set $prevpass to $passage>><<goto "GB-26A">><</button>>
-
-<<button "Ramp">><<set $prevpass to $passage>><<goto "GB-26B">><</button>>
-
-
+<div class="menu-wrapper">
+  <<button "Stairs">><<set $prevpass to $passage>><<goto "GB-26A">><</button>>
+  <<button "Ramp">><<set $prevpass to $passage>><<goto "GB-26B">><</button>>
+</div>
 
 </main>
 <<include "footer2">>
 
 
 :: GB-26A {"position":"3025,300","size":"100,100"}
-<<set $passage to "GB-26A">><<set $nextpassage to "GB-28">>
-<<include "header">>
+<<set $passage to "GB-26A">><<set $nextpassage to "GB-28">><<audio ":all" stop>><<audio "GB_26A" play>>
 <main>
 
 Stairs then. Head back toward Barbican tube (that’s to the left in case you’ve already forgotten).
@@ -1178,18 +1114,14 @@ Right next to the tube entrance, there’s a stairway. Go up that.
 Now cross the walkway and let me know when you’re there.
 
 <<button "I'm there">><<set $prevpass to $passage>><<goto "GB-28">><</button>>
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-26B {"position":"3025,500","size":"100,100"}
-<<set $passage to "GB-26B">><<set $nextpassage to "GB-27B">>
-<<include "header">>
+<<set $passage to "GB-26B">><<set $nextpassage to "GB-27B">><<audio ":all" stop>><<audio "GB_26B" play>>
 <main>
-
+<div id="mount"></div> 
 Ramp then. If you took the ramp to come down, we’ll just be coming back to the way we came.
 
 So, from the pub, take a left back to Aldersgate Street.
@@ -1200,44 +1132,34 @@ Cross the street there. I’ll give you a moment. Let me know when you’re over
 
 <<button "I've crossed">><<set $prevpass to $passage>><<goto "GB-28">><</button>>
 
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-27B {"position":"3150,500","size":"100,100"}
-<<set $passage to "GB-27B">><<set $nextpassage to "">>
-<<include "header">>
+<<set $passage to "GB-27B">><<set $nextpassage to "">><<set $map4 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>><<audio "GB_27B" play>>
 <main>
-
+<div id="mount"></div> 
 Excellent. Take a left past all the bike racks towards the Shakespeare Pub. Just before the Shakespeare, it’s a sharp right to the ramp.
 
 Passing the launderette on the right, go to the top of the ramp and let me know when you’re there.
 
-/*MAP NEEDED*/
+$map4
 
 
 <<button "I'm there">><<set $prevpass to $passage>><<goto "GB-28">><</button>>
-
-
-
 
 </main>
 <<include "footer">>
 
 
 :: GB-28 {"position":"3275,400","size":"100,100"}
-<<set $passage to "GB-28">><<set $nextpassage to "GB-29">>
-<<include "header">>
+<<set $passage to "GB-28">><<set $nextpassage to "GB-29">><<audio ":all" stop>><<audio "GB_28" play>>
 <main>
-
+<div id="mount"></div> 
 Good. So you’re at Beech Gardens. From here, look away from the tube station and Aldersgate Street, towards the big yellow Barbican Exhibition sign.
 
 Go towards that.
-
-/*Time for them to walk */
 
 After you’ve passed the eight trees, you should see Ben Jonson house.
 
@@ -1256,19 +1178,13 @@ In that direction, you should see a ramp. Take that down to street level. Let me
 
 <<button "I'm there">><<set $prevpass to $passage>><<goto "GB-29">><</button>>
 
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-29 {"position":"3400,400","size":"100,100"}
-<<set $passage to "GB-29">><<set $nextpassage to "GB-30A">>
-<<include "header">>
-<main>
-
+<<set $passage to "GB-29">><<set $nextpassage to "GB-30A">><<set $map4 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>><<audio "GB_29" play>>
+<main><div id="mount"></div> 
 This is old Cripplegate Free Library on Golden Lane.
 
 It’s boarded up unfortunately. It’s a pity as there’s certain to be strong psychic energy in a place like that.
@@ -1289,23 +1205,16 @@ Look for a sign...
 
 A sign that reads: “Golden Lane Recreational Area”.
 
-/* MAP NEEDED */
-
-
+$map4
 <<button "I'm there">><<set $prevpass to $passage>><<goto "GB-30A">><</button>>
-
-
-
 
 </main>
 <<include "footer2">>
 
 
 :: GB-30A {"position":"3525,400","size":"100,100"}
-<<set $passage to "GB-30A">><<set $nextpassage to "GB-31A">>
-<<include "header">>
-<main>
-
+<<set $passage to "GB-30A">><<set $nextpassage to "GB-31A">><<set $map5 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>><<audio "GB_30" play>>
+<main><div id="mount"></div> 
 Follow that sign, but remain on the elevated pavement on the opposite side of the Shakespeare.
 
 You’ll get to a set of stairs.
@@ -1320,10 +1229,9 @@ You’ll see a set of blue garage doors with the numbers 15 to 23.
 
 Let me know when you’re there.
 
-/*MAP NEEDED*/
+$map5
 
 <<button "I'm there">><<set $prevpass to $passage>><<goto "GB-31A">><</button>>
-
 
 
 </main>
@@ -1331,10 +1239,8 @@ Let me know when you’re there.
 
 
 :: GB-31A {"position":"3650,400","size":"100,100"}
-<<set $passage to "GB-31A">><<set $nextpassage to "GB-32A">>
-<<include "header">>
-<main>
-
+<<set $passage to "GB-31A">><<set $nextpassage to "GB-32A">><<audio ":all" stop>><<audio "GB_31" play>>
+<main><div id="mount"></div> 
 So this estate was built in the 1950s and 1960s. It took a long time. As I mentioned before this whole area was bombed very badly in the Second World War and there was a sudden need for affordable housing.
 
 But when they first announced the plan to build this estate, the architects received a strange letter from a very respectable man (a professor at Oxford University) who warned them that this land was an ancient Anglo-Saxon burial ground and that they should cease development.
@@ -1365,59 +1271,44 @@ Some of them - the very bravest - would run after it and those that did all said
 So what do you think? Shall give it a try?
 
 <<button "Try the paracommunicator">><<set $prevpass to $passage>><<goto "GB-32A">><</button>>
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: GB-32A {"position":"3775,400","size":"100,100"}
-<<set $passage to "GB-32A">><<set $nextpassage to "GB-33A">>
-<<include "header">>
-<main>
+<<set $passage to "GB-32A">><<set $nextpassage to "GB-33A">><<audio ":all" stop>><<set $clicked to false>>
 
-Activate the paracommunicator when you’re ready.
-
+<main><div id="mount">Activate the paracommunicator when you’re ready.</div> 
 <div class = "detector">
-<<set $spinning to false>>
+
 <<link "<img src = 'https://media3.giphy.com/media/1hpCPjWPnKpKLwAGIX/giphy.gif'>" >>
-	<<if $spinning>>
-    	<<set $spinning to false>>
-        <<audio ":all" stop>>
-		<<removeclass ".detector" "spinning">>
-    <<else>>
-   		<<set $spinning to true>>
-        <<audio "badjoke" play>>
-   	    <<addclass ".detector" "spinning">>
-    <</if>>
+<<if $clicked>>
+    <<timed 10s>><<audio "GB_32" play>><</timed>>
+    <<timed 12s>><<replace "#mount">><<type 40ms>>What's going on with this thing?<</type>><</replace>><</timed>>
+    <<timed 15s>><<replace "#mount">><<type 40ms>>Got some kind of...<</type>><</replace>><</timed>>
+    <<timed 18s>><<replace "#mount">><<type 40ms>>a technical error.<</type>><</replace>><</timed>>
+    <<timed 22s>><<replace "#mount">><<type 40ms>>It could be the battery. <</type>><</replace>><</timed>>
+    <<timed 25s>><<replace "#mount">><<type 40ms>>You know what? I've got some spare batteries in the car... I'm parked nearby so I'll go and grab them. <</type>><</replace>><</timed>>
+    <<timed 31s>><<replace "#mount">><<type 40ms>>You lot, stay here. <</type>><</replace>><</timed>>
+    <<timed 33s>><<replace "#mount">><<type 40ms>>Okay?
+    <<button "Okay">> <<audio ":all" stop>><<set $prevpass to $passage>><<goto "GB-33A">><</button>> <</type>><</replace>><</timed>>
+<<else>>
+  <<replace "#mount">><</replace>>
+   		<<set $clicked to true>>
+     <<audio "whitenoise_short_4" play>>
+<</if>>
 <</link>> 
+
 </div>
-
-/*This time the para-communicator won’t work. It’ll just be the
-standard white noise you get when you try it anywhere else.
-Allow the player to try it at least once then count 10
-seconds before Brian comes back. */
-
-What’s going on with this thing?
-
-Some kind of technical error. Could be the battery. You know what. I’ve got some spare batteries in the car. I’m parked nearby so I’ll go and grab them. You lot stay here, okay?
-
-<<button "Okay">> <<audio ":all" stop>><<set $prevpass to $passage>><<goto "GB-33A">><</button>>
-
-
-
 
 </main>
 <<include "footer2">>
 
 
 :: GB-33A {"position":"3900,400","size":"100,100"}
-<<set $passage to "GB-33A">><<set $nextpassage to "end">>
-<<include "header">>
+<<set $passage to "GB-33A">><<set $nextpassage to "end">><<audio ":all" stop>><<audio "GB_33" play>>
 <main>
-
+<div id="mount"></div> 
 Great. Back in two minutes. Really sorry about this. This doesn’t usually happen.
 
 /*After this, wait 20 seconds.
@@ -1444,7 +1335,7 @@ This has been Ghosthunting with Brian. And I’d like to thank you all for openi
 
 /*Some kind of spooky music*/
 
-<<timed 3s>><<set $prevpass to $passage>><<goto "end">><</timed>>
+<<timed 170s>><<set $prevpass to $passage>><<goto "end">><</timed>>
 
 
 </main>
@@ -1452,10 +1343,11 @@ This has been Ghosthunting with Brian. And I’d like to thank you all for openi
 
 
 :: end {"position":"100,625","size":"100,100"}
+<<set $passage to "end">><<set $nextpassage to "end">><<audio ":all" stop>><<set $map6 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
 <main>
-
 End location
 
+$map6
   
 </main>
 <<include "footer">>
