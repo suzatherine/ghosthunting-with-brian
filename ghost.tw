@@ -1291,6 +1291,7 @@ So what do you think? Shall give it a try?
     <<timed 25s>><<replace "#mount">><<type 40ms>>You know what? I've got some spare batteries in the car... I'm parked nearby so I'll go and grab them. <</type>><</replace>><</timed>>
     <<timed 31s>><<replace "#mount">><<type 40ms>>You lot, stay here. <</type>><</replace>><</timed>>
     <<timed 33s>><<replace "#mount">><<type 40ms>>Okay?
+    
     <<button "Okay">> <<audio ":all" stop>><<set $prevpass to $passage>><<goto "GB-33A">><</button>> <</type>><</replace>><</timed>>
 <<else>>
   <<replace "#mount">><</replace>>
