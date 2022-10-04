@@ -506,6 +506,8 @@ setup.checkForRepeats = (array,element) => {
 </footer>
 
 
+
+
 :: lost {"position":"525,50","size":"100,100"}
 <<set $passage to "lost">>
 <main>
@@ -527,7 +529,6 @@ You have two options:
 <<button "start">><<goto "GB-05">><</button>>
 
 </main>
-<<include "footer">>
 
 
 :: ghostdetector {"position":"925,100","size":"100,100"}
