@@ -1352,7 +1352,7 @@ End location
 $map6
   
 </main>
-<<include "footer">>
+<<include "footerend">>
 
 
 :: footer2 {"position":"100,500","size":"100,100"}
@@ -1364,3 +1364,8 @@ $map6
 </footer>
 
 
+
+:: footerend {"position":"99,485","size":"100,100"}
+<footer>
+<div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
+</footer>
