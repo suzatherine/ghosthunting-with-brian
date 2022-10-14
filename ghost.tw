@@ -7,7 +7,7 @@ Ghosthunting with Brian
 	"ifid": "22353D7A-5C3E-4DF2-81CF-9DE14881F05A",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "landing",
+	"start": "GB-32A",
 	"zoom": 0.6
 }
 
@@ -311,10 +311,16 @@ textarea{
 }
 
 .detector{
- width: 50%;
+ width: 70%;
 margin: auto;
     display: flex;
 }
+/* 
+.detector.broken{
+ width: 70%;
+margin: auto;
+    display: initial;
+} */
 
 .activate{
   font-family: "Big John";
@@ -339,6 +345,41 @@ margin: auto;
     }
 }
 
+/* LANDING  */
+main.landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh
+}
+
+.landing > h2 {
+  font-family: "Big John";
+  text-align:center;
+  margin-block-end: 0;
+}
+
+.landing > a {
+  display:flex;    
+  justify-content: center;
+  
+}
+
+.landing > a:active{
+  background-color: transparent;
+
+}
+
+.landing > a > img {
+  width: 80%;
+  max-width: 300px;
+}
+
+/* END */
+main.end > h2{
+  margin-block-end: 0;
+}
 /* KEY  */
 .key-wrapper{
   width:fit-content;
@@ -556,7 +597,7 @@ setup.checkForRepeats = (array,element) => {
 <<cacheaudio "GB_19A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19A.mp3">>
 <<cacheaudio "GB_19B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19B.mp3">>
 <<cacheaudio "GB_19.2B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19.2B.mp3">>
-<<cacheaudio "GB_19.3B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19.3  B.mp3">>
+<<cacheaudio "GB_19.3B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19.3B.mp3">>
 <<cacheaudio "GB_20" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_20.mp3">>
 <<cacheaudio "GB_21" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_21.mp3">>
 <<cacheaudio "GB_22" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_22.mp3">>
@@ -614,8 +655,9 @@ setup.checkForRepeats = (array,element) => {
 <div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
 </footer>
 
-:: footerkey
-<footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "GB-35">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "GB-36">><</button>></div></div></footer>
+
+:: footerkey {"position":"725,100","size":"100,100"}
+<footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "Show map">><<set $prevpass to $passage>><<goto "end">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "GB-35">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "GB-36">><</button>></div></div></footer>
 
 
 :: lost {"position":"400,0","size":"100,100"}
@@ -634,9 +676,10 @@ You have two options:
 
 :: landing {"position":"250,0","size":"100,100"}
 <<set $passage to "landing">><<audio ":all" stop>>
-<main>
-
-<<button "start">><<goto "GB-01">><</button>>
+<main class="landing">
+<h2>Ghost Hunting with Brian</h2> 
+ <<link "<img src='./assets/dragon2.gif'>">><<set $prevpass to $passage>><<goto "GB-01">><</link>>
+<<button "start">><<set $prevpass to $passage>><<goto "GB-01">><</button>>
 
 </main>
 
@@ -647,7 +690,7 @@ You have two options:
 
   <div class = "detector">
   <<set $spinning to false>>
-<<link "<img src = 'https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png'>" >>
+<<link "<img src = './assets/ghosts-01.png'>" >>
 	<<if $spinning>>
     	<<set $spinning to false>>
         <<audio ":all" stop>>
@@ -728,7 +771,7 @@ You have two options:
 
 <<timed 29s>><<replace "#mount">><div class = "detector">
 <<set $spinning to false>>
-<<link "<img src = 'https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png'>'" >>
+<<link "<img src = './assets/ghosts-01.png'>" >>
 	<<if $spinning>>
     	<<set $spinning to false>>
         <<audio "whitenoise_short_1" stop>>
@@ -906,11 +949,8 @@ $map3
 
 
 :: GB-12 {"position":"1400,400","size":"100,100"}
-<<set $passage to "GB-12">><<set $nextpassage to "GB-13">><<audio ":all" stop>><<audio "GB_12" play>>
-
-<main><div id="device"></div>  
+<<set $passage to "GB-12">><<set $nextpassage to "GB-13">><<audio ":all" stop>><<audio "GB_12" play>><main><div id="device"></div>  
 <div id="mount"></div>  
-
 
 <<timed 1.5s>><<replace "#mount">>Whatever the truth, there is said to be a strange energy about this church. <</replace>><</timed>>
   
@@ -923,8 +963,8 @@ $map3
 <<timed 24s>><<replace "#mount">>Let me know what you can hear.<</replace>><</timed>>
 
 <<timed 25s>><<replace "#device">>
-Press to Activate
-<div class = "detector"><<set $spinning to false>><<link "<img src = 'https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png'>" >>
+<h2 class="activate">Press to Activate</h2>
+<div class = "detector"><<set $spinning to false>><<link "<img src = './assets/ghosts-01.png'>" >>
 	<<if $spinning>>
     	<<set $spinning to false>>
         <<audio ":all" stop>>
@@ -966,7 +1006,7 @@ Press to Activate
   
 <<timed 0.1s>><<replace "#mount">>Yes, that's what I heard too! Just like in the story.<</replace>><</timed>>
   
-<<timed 6s>><<replace "#mount">><Incredible. Such a powerful device!<</replace>><</timed>>
+<<timed 6s>><<replace "#mount">>Incredible. Such a powerful device!<</replace>><</timed>>
  
 <<timed 11s>><<replace "#mount">>We don't want to disturb her too long. We can only hope she finds rest.<</replace>><</timed>>
   
@@ -1039,7 +1079,7 @@ Stop at the top of the stairwell and let me know you're there.
 
 <<timed 0.1s>><<replace "#mount">>Bingo! You'll see signs pointing to the Barbican Centre, but we want to go to the other, towards Barbican tube station and Wallside.<</replace>><</timed>>
 
-<<timed 13.5s>><<replace "#mount">>These are the Barbican Highwalks. In the future, all cities will be like this.<<</replace>><</timed>>
+<<timed 13.5s>><<replace "#mount">>These are the Barbican Highwalks. In the future, all cities will be like this.<</replace>><</timed>>
 
 <<timed 21.5s>><<replace "#mount">>Take your time, walk slowly and listen carefully for sounds.<</replace>><</timed>>
 
@@ -1222,11 +1262,10 @@ Now cross at a zebra crossing, looking both ways. Let me know when you're across
 <<timed 0.5s>><<replace "#mount">>Okay. Make sure you’re comfortable. Take a deep breath, then use your para-communicator. <</replace>><</timed>>
 <<timed 10s>><<replace "#mount">>Let me know if you hear anything. <</replace>><</timed>>
 <<timed 13s>>
-
 <<replace "#device">>
 <div class = "detector">
 <<set $spinning to false>>
-<<link "<img src = 'https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png'>" >>
+<<link "<img src = './assets/ghosts-01.png'>" >>
 	<<if $spinning>>
     	<<set $spinning to false>>
         <<audio ":all" stop>>
@@ -1235,8 +1274,7 @@ Now cross at a zebra crossing, looking both ways. Let me know when you're across
    		<<set $spinning to true>>
       <<replace "#mount">><</replace>>
         <<audio "ghost_charlie" play>>
-   	    <<addclass ".detector" "spinning">>
-        
+   	    <<addclass ".detector" "spinning">>      
 <<timed 14s>><<replace "#mount">><<type 70ms>>♪ My old man's a dustman, he wears a dustman's hat. He wears cor blimey trousers and... <</type>><</replace>><</timed>>
 
 <<timed 22s>><<replace "#mount">><<type 50ms>> ♪ ... doesn't want to raise the rent<</type>><</replace>><</timed>>
@@ -1257,13 +1295,9 @@ Now cross at a zebra crossing, looking both ways. Let me know when you're across
     <</if>>
 <</link>> 
 </div>
-<h2 class="activate">Press to Activate</h2>
-<<timed 50s>><<button "I heard something">><<audio ":all" stop>><<set $prevpass to $passage>><<goto "GB-24">><</button>><</timed>>
+<h2 class="activate">Press to Activate</h2><<timed 50s>>
+<<button "I heard something">><<audio ":all" stop>><<set $prevpass to $passage>><<goto "GB-24">><</button>><</timed>>
 <</replace>><</timed>>
-
-
-
-
 
 </main>
 <<include "footer">>
@@ -1304,18 +1338,10 @@ Now cross at a zebra crossing, looking both ways. Let me know when you're across
 :: GB-27B {"position":"3400,400","size":"100,100"}
 <<set $passage to "GB-27B">><<set $nextpassage to "GB-29">><<set $map4 = setup.generateDirectionsMap([51.520267, -0.097266],[51.521650, -0.096179])>><<audio ":all" stop>><<audio "GB_27B" play>>
 <main>
-<div id="mount"></div> 
-
-<<timed 0.1s>><<replace "#mount">><<type 70ms>>Excellent. Take a left past all the bike racks towards The Shakespeare Pub.<</type>><</replace>><</timed>>
-
-<<timed 6s>><<replace "#mount">>
+Excellent. Take a left past all the bike racks towards The Shakespeare Pub.
 After you pass The Shakespeare Pub there is an open area and then a ramp going down. Let me know when you're at the ramp
-
 $map4
-
-<<button "I'm there">><<set $prevpass to $passage>><<goto "GB-29">><</button>><</replace>><</timed>>
-
-
+<<button "I'm there">><<set $prevpass to $passage>><<goto "GB-29">><</button>>
 </main>
 <<include "footer">>
 
@@ -1374,7 +1400,7 @@ $map4
 
 <<timed 67s>><<replace "#mount">>But the man insisted they abandon the works, at least until the site could be fully excavated, and any remains unearthed and reburied according to the rites of the time. <</replace>><</timed>>
 
-<<timed 81.5s>><<replace "#mount">>>He even travelled down from Oxford to visit them in person. In the end, they had to file a restraining order against the man.><</replace>><</timed>>
+<<timed 81.5s>><<replace "#mount">>>He even travelled down from Oxford to visit them in person. In the end, they had to file a restraining order against the man.<</replace>><</timed>>
 
 <<timed 91s>><<replace "#mount">>They felt sorry for him, thinking he had completely lost his mind.<</replace>><</timed>>
 
@@ -1390,7 +1416,7 @@ $map4
 
 <<timed 141s>><<replace "#mount">>Some of the bravest children would sneak out of their flats to try to get closer to it. As soon as they'd approach, it would take off running, so they couldn't get a look at its face.<</replace>><</timed>>
 
-<<timed 154s>><<replace "#mount">>Some of them, the very bravest, would run after it. And those that did all said that it would run down to this area. And it was here among these shadows that it would disappear.<<</replace>><</timed>>
+<<timed 154s>><<replace "#mount">>Some of them, the very bravest, would run after it. And those that did all said that it would run down to this area. And it was here among these shadows that it would disappear.<</replace>><</timed>>
 
 <<timed 170s>><<replace "#mount">>So, what do you think? Shall we give it a try?<</replace>><</timed>>
 
@@ -1407,10 +1433,11 @@ $map4
 :: GB-32A {"position":"3900,400","size":"100,100"}
 <<set $passage to "GB-32A">><<set $nextpassage to "GB-33A">><<audio ":all" stop>><<set $clicked to false>>
 
-<main><div class = "detector">
+<main>
 <div id="mount"><h2 class="activate">Press to Activate</h2></div> 
+<div class = "detector broken">
 
-<<link "<img src = 'https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png'>" >>
+<<link "<img src = './assets/ghosts-01.png'>" >>
 <<if $clicked>>
 <<replace "#mount">>....<</replace>>
     <<timed 2s>><<audio "GB_32" play>><</timed>>
@@ -1469,7 +1496,7 @@ $map4
 
 <<timed 120s>><<replace "#mount">>I'm here every weekend, except the school holidays and not the FA Cup weekend, obviously.<</replace>><</timed>>
 
-<<timed 127s>><<replace "#mount">>Just tell them give me a call and check. Most Saturdays.><</replace>><</timed>>
+<<timed 127s>><<replace "#mount">>Just tell them give me a call and check. Most Saturdays.<</replace>><</timed>>
 
 <<timed 133s>><<replace "#mount">>This has been Ghosthunting with Brian and I'd like to thank you all for opening your minds to the realm beyond.<</replace>><</timed>>
 
@@ -1482,15 +1509,18 @@ $map4
 
 :: end {"position":"100,625","size":"100,100"}
 <<set $passage to "end">><<set $nextpassage to "end">><<audio ":all" stop>><<set $map6 = setup.generateDirectionsMap([51.51698236090703, -0.09271546625344255],[51.51318914905516, -0.09147383074234947])>>
-<main>
-End location
-
-$map6
+<main class="end"><h2>End location</h2>Golden Lane Estate Community Centre
+Golden Lane Estate
+EC1Y 0SA
 
 <<button "Next">><<set $prevpass to $passage>><<goto "GB-34">><</button>>
 
+$map6
+
+
+
 </main>
-<<include "footerend">>
+<<include "footerkey">>
 
 
 :: GB-08.2 {"position":"900,400","size":"100,100"}
@@ -1658,12 +1688,13 @@ Now - are you playing this adventure solo, or in a group?
 
  <<include "footer">>
 
+
 :: GB-02A {"position":"525,150","size":"100,100"}
 <<set $passage to "GB-02A">><<set $nextpassage to "GB-03">>
 <<audio ":all" stop>><<audio "solo" play>>
 <main>
 <div id="mount"></div> 
-This adventure is great for a solo adventurer,
+This adventure is great for a solo player!
 
 <<button "Next">><<set $prevpass to $passage>><<goto "GB-03">><</button>>
  

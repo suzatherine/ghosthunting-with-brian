@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://22353D7A-5C3E-4DF2-81CF-9DE14881F05A// --><tw-storydata name="Ghosthunting with Brian" startnode="8" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="22353D7A-5C3E-4DF2-81CF-9DE14881F05A" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+	<!-- UUID://22353D7A-5C3E-4DF2-81CF-9DE14881F05A// --><tw-storydata name="Ghosthunting with Brian" startnode="37" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="22353D7A-5C3E-4DF2-81CF-9DE14881F05A" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @font-face {
   font-family: "Big John";
@@ -396,10 +396,16 @@ textarea{
 }
 
 .detector{
- width: 50%;
+ width: 70%;
 margin: auto;
     display: flex;
 }
+/* 
+.detector.broken{
+ width: 70%;
+margin: auto;
+    display: initial;
+} */
 
 .activate{
   font-family: "Big John";
@@ -424,6 +430,41 @@ margin: auto;
     }
 }
 
+/* LANDING  */
+main.landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh
+}
+
+.landing > h2 {
+  font-family: "Big John";
+  text-align:center;
+  margin-block-end: 0;
+}
+
+.landing > a {
+  display:flex;    
+  justify-content: center;
+  
+}
+
+.landing > a:active{
+  background-color: transparent;
+
+}
+
+.landing > a > img {
+  width: 80%;
+  max-width: 300px;
+}
+
+/* END */
+main.end > h2{
+  margin-block-end: 0;
+}
 /* KEY  */
 .key-wrapper{
   width:fit-content;
@@ -633,7 +674,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;&lt;cacheaudio &quot;GB_19A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19A.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;GB_19B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;GB_19.2B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19.2B.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;GB_19.3B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19.3  B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;GB_19.3B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19.3B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;GB_20&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_20.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;GB_21&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_21.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;GB_22&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_22.mp3&quot;&gt;&gt;
@@ -673,7 +714,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="footerend" tags="" position="219,485" size="100,100">&lt;footer&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="footerkey" tags="" position="725,100" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper end&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-35&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Try another adventure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-36&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="lost" tags="" position="400,0" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="footerkey" tags="" position="725,100" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Show map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper end&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-35&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Try another adventure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-36&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="lost" tags="" position="400,0" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main&gt;
 You have two options:
 
@@ -684,16 +725,17 @@ You have two options:
 &lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footersimple&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="landing" tags="" position="250,0" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-&lt;main&gt;
-
-&lt;&lt;button &quot;start&quot;&gt;&gt;&lt;&lt;goto &quot;GB-01&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;main class=&quot;landing&quot;&gt;
+&lt;h2&gt;Ghost Hunting with Brian&lt;/h2&gt; 
+ &lt;&lt;link &quot;&lt;img src=&#39;./assets/dragon2.gif&#39;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-01&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;button &quot;start&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-01&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="9" name="ghostdetector" tags="" position="575,0" size="100,100">&lt;&lt;set $passage to &quot;badchoices&quot;&gt;&gt;
 &lt;main&gt;
 
   &lt;div class = &quot;detector&quot;&gt;
   &lt;&lt;set $spinning to false&gt;&gt;
-&lt;&lt;link &quot;&lt;img src = &#39;https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png&#39;&gt;&quot; &gt;&gt;
+&lt;&lt;link &quot;&lt;img src = &#39;./assets/ghosts-01.png&#39;&gt;&quot; &gt;&gt;
 	&lt;&lt;if $spinning&gt;&gt;
     	&lt;&lt;set $spinning to false&gt;&gt;
         &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
@@ -766,7 +808,7 @@ You have two options:
 
 &lt;&lt;timed 29s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;div class = &quot;detector&quot;&gt;
 &lt;&lt;set $spinning to false&gt;&gt;
-&lt;&lt;link &quot;&lt;img src = &#39;https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png&#39;&gt;&#39;&quot; &gt;&gt;
+&lt;&lt;link &quot;&lt;img src = &#39;./assets/ghosts-01.png&#39;&gt;&quot; &gt;&gt;
 	&lt;&lt;if $spinning&gt;&gt;
     	&lt;&lt;set $spinning to false&gt;&gt;
         &lt;&lt;audio &quot;whitenoise_short_1&quot; stop&gt;&gt;
@@ -920,11 +962,8 @@ $map3
 &lt;&lt;button &quot;Do you think that&#39;s the true story?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-12&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="GB-12" tags="" position="1400,400" size="100,100">&lt;&lt;set $passage to &quot;GB-12&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;GB-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;GB_12&quot; play&gt;&gt;
-
-&lt;main&gt;&lt;div id=&quot;device&quot;&gt;&lt;/div&gt;  
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="GB-12" tags="" position="1400,400" size="100,100">&lt;&lt;set $passage to &quot;GB-12&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;GB-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;GB_12&quot; play&gt;&gt;&lt;main&gt;&lt;div id=&quot;device&quot;&gt;&lt;/div&gt;  
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;  
-
 
 &lt;&lt;timed 1.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Whatever the truth, there is said to be a strange energy about this church. &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
   
@@ -937,8 +976,8 @@ $map3
 &lt;&lt;timed 24s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Let me know what you can hear.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 25s&gt;&gt;&lt;&lt;replace &quot;#device&quot;&gt;&gt;
-Press to Activate
-&lt;div class = &quot;detector&quot;&gt;&lt;&lt;set $spinning to false&gt;&gt;&lt;&lt;link &quot;&lt;img src = &#39;https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png&#39;&gt;&quot; &gt;&gt;
+&lt;h2 class=&quot;activate&quot;&gt;Press to Activate&lt;/h2&gt;
+&lt;div class = &quot;detector&quot;&gt;&lt;&lt;set $spinning to false&gt;&gt;&lt;&lt;link &quot;&lt;img src = &#39;./assets/ghosts-01.png&#39;&gt;&quot; &gt;&gt;
 	&lt;&lt;if $spinning&gt;&gt;
     	&lt;&lt;set $spinning to false&gt;&gt;
         &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
@@ -972,7 +1011,7 @@ Press to Activate
   
 &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Yes, that&#39;s what I heard too! Just like in the story.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
   
-&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;Incredible. Such a powerful device!&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Incredible. Such a powerful device!&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
 &lt;&lt;timed 11s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;We don&#39;t want to disturb her too long. We can only hope she finds rest.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
   
@@ -1029,7 +1068,7 @@ Stop at the top of the stairwell and let me know you&#39;re there.
 
 &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Bingo! You&#39;ll see signs pointing to the Barbican Centre, but we want to go to the other, towards Barbican tube station and Wallside.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 13.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;These are the Barbican Highwalks. In the future, all cities will be like this.&lt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 13.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;These are the Barbican Highwalks. In the future, all cities will be like this.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 21.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Take your time, walk slowly and listen carefully for sounds.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -1184,11 +1223,10 @@ Now cross at a zebra crossing, looking both ways. Let me know when you&#39;re ac
 &lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Okay. Make sure you’re comfortable. Take a deep breath, then use your para-communicator. &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 10s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Let me know if you hear anything. &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 13s&gt;&gt;
-
 &lt;&lt;replace &quot;#device&quot;&gt;&gt;
 &lt;div class = &quot;detector&quot;&gt;
 &lt;&lt;set $spinning to false&gt;&gt;
-&lt;&lt;link &quot;&lt;img src = &#39;https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png&#39;&gt;&quot; &gt;&gt;
+&lt;&lt;link &quot;&lt;img src = &#39;./assets/ghosts-01.png&#39;&gt;&quot; &gt;&gt;
 	&lt;&lt;if $spinning&gt;&gt;
     	&lt;&lt;set $spinning to false&gt;&gt;
         &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
@@ -1197,8 +1235,7 @@ Now cross at a zebra crossing, looking both ways. Let me know when you&#39;re ac
    		&lt;&lt;set $spinning to true&gt;&gt;
       &lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;
         &lt;&lt;audio &quot;ghost_charlie&quot; play&gt;&gt;
-   	    &lt;&lt;addclass &quot;.detector&quot; &quot;spinning&quot;&gt;&gt;
-        
+   	    &lt;&lt;addclass &quot;.detector&quot; &quot;spinning&quot;&gt;&gt;      
 &lt;&lt;timed 14s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 70ms&gt;&gt;♪ My old man&#39;s a dustman, he wears a dustman&#39;s hat. He wears cor blimey trousers and... &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 22s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt; ♪ ... doesn&#39;t want to raise the rent&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1219,13 +1256,9 @@ Now cross at a zebra crossing, looking both ways. Let me know when you&#39;re ac
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/link&gt;&gt; 
 &lt;/div&gt;
-&lt;h2 class=&quot;activate&quot;&gt;Press to Activate&lt;/h2&gt;
-&lt;&lt;timed 50s&gt;&gt;&lt;&lt;button &quot;I heard something&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;h2 class=&quot;activate&quot;&gt;Press to Activate&lt;/h2&gt;&lt;&lt;timed 50s&gt;&gt;
+&lt;&lt;button &quot;I heard something&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-
-
-
-
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="GB-24" tags="" position="3150,400" size="100,100">&lt;&lt;set $passage to &quot;GB-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;GB-26B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;GB_24&quot; play&gt;&gt;
@@ -1254,18 +1287,10 @@ Now cross at a zebra crossing, looking both ways. Let me know when you&#39;re ac
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="GB-27B" tags="" position="3400,400" size="100,100">&lt;&lt;set $passage to &quot;GB-27B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;GB-29&quot;&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([51.520267, -0.097266],[51.521650, -0.096179])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;GB_27B&quot; play&gt;&gt;
 &lt;main&gt;
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
-
-&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 70ms&gt;&gt;Excellent. Take a left past all the bike racks towards The Shakespeare Pub.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-
-&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+Excellent. Take a left past all the bike racks towards The Shakespeare Pub.
 After you pass The Shakespeare Pub there is an open area and then a ramp going down. Let me know when you&#39;re at the ramp
-
 $map4
-
-&lt;&lt;button &quot;I&#39;m there&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-29&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-
-
+&lt;&lt;button &quot;I&#39;m there&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-29&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="GB-29" tags="" position="3525,400" size="100,100">&lt;&lt;set $passage to &quot;GB-29&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;GB-30A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;GB_29&quot; play&gt;&gt;
 &lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
@@ -1312,7 +1337,7 @@ $map4
 
 &lt;&lt;timed 67s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;But the man insisted they abandon the works, at least until the site could be fully excavated, and any remains unearthed and reburied according to the rites of the time. &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 81.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&gt;He even travelled down from Oxford to visit them in person. In the end, they had to file a restraining order against the man.&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 81.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&gt;He even travelled down from Oxford to visit them in person. In the end, they had to file a restraining order against the man.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 91s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;They felt sorry for him, thinking he had completely lost his mind.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -1328,7 +1353,7 @@ $map4
 
 &lt;&lt;timed 141s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Some of the bravest children would sneak out of their flats to try to get closer to it. As soon as they&#39;d approach, it would take off running, so they couldn&#39;t get a look at its face.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 154s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Some of them, the very bravest, would run after it. And those that did all said that it would run down to this area. And it was here among these shadows that it would disappear.&lt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 154s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Some of them, the very bravest, would run after it. And those that did all said that it would run down to this area. And it was here among these shadows that it would disappear.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 170s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;So, what do you think? Shall we give it a try?&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -1341,10 +1366,11 @@ $map4
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="GB-32A" tags="" position="3900,400" size="100,100">&lt;&lt;set $passage to &quot;GB-32A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;GB-33A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $clicked to false&gt;&gt;
 
-&lt;main&gt;&lt;div class = &quot;detector&quot;&gt;
+&lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;h2 class=&quot;activate&quot;&gt;Press to Activate&lt;/h2&gt;&lt;/div&gt; 
+&lt;div class = &quot;detector broken&quot;&gt;
 
-&lt;&lt;link &quot;&lt;img src = &#39;https://youhavefoundconey.net/tgkmaze/ghost/assets/radarbutton.png&#39;&gt;&quot; &gt;&gt;
+&lt;&lt;link &quot;&lt;img src = &#39;./assets/ghosts-01.png&#39;&gt;&quot; &gt;&gt;
 &lt;&lt;if $clicked&gt;&gt;
 &lt;&lt;replace &quot;#mount&quot;&gt;&gt;....&lt;&lt;/replace&gt;&gt;
     &lt;&lt;timed 2s&gt;&gt;&lt;&lt;audio &quot;GB_32&quot; play&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1399,7 +1425,7 @@ $map4
 
 &lt;&lt;timed 120s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;I&#39;m here every weekend, except the school holidays and not the FA Cup weekend, obviously.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 127s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Just tell them give me a call and check. Most Saturdays.&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 127s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Just tell them give me a call and check. Most Saturdays.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 133s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;This has been Ghosthunting with Brian and I&#39;d like to thank you all for opening your minds to the realm beyond.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -1408,15 +1434,18 @@ $map4
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="end" tags="" position="100,625" size="100,100">&lt;&lt;set $passage to &quot;end&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map6 = setup.generateDirectionsMap([51.51698236090703, -0.09271546625344255],[51.51318914905516, -0.09147383074234947])&gt;&gt;
-&lt;main&gt;
-End location
-
-$map6
+&lt;main class=&quot;end&quot;&gt;&lt;h2&gt;End location&lt;/h2&gt;Golden Lane Estate Community Centre
+Golden Lane Estate
+EC1Y 0SA
 
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-34&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
+$map6
+
+
+
 &lt;/main&gt;
-&lt;&lt;include &quot;footerend&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="GB-08.2" tags="" position="900,400" size="100,100">&lt;&lt;set $passage to &quot;GB-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;GB-09&quot;&gt;&gt;&lt;&lt;set $map2 = setup.generateDirectionsMap([51.517101, -0.093869],[51.517658, -0.093439])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;GB_08.2&quot; play&gt;&gt;
+&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="GB-08.2" tags="" position="900,400" size="100,100">&lt;&lt;set $passage to &quot;GB-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;GB-09&quot;&gt;&gt;&lt;&lt;set $map2 = setup.generateDirectionsMap([51.517101, -0.093869],[51.517658, -0.093439])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;GB_08.2&quot; play&gt;&gt;
 &lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
   
 &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;All looks brand new, doesn&#39;t it? Fear not, my friend. Look to your left. There, in the traffic aisle.&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1562,7 +1591,7 @@ Now - are you playing this adventure solo, or in a group?
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;solo&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
-This adventure is great for a solo adventurer,
+This adventure is great for a solo player!
 
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;GB-03&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
  
