@@ -546,7 +546,7 @@ iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=17&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=17&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
 // console.log(iFrame)
 return iFrame
@@ -574,60 +574,60 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "GB_01" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_01.mp3">>
-<<cacheaudio "GB_04" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB-04.mp3">>
-<<cacheaudio "GB_05" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_05.mp3">>
-<<cacheaudio "GB_06" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_06.mp3">>
-<<cacheaudio "GB_07" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_07.mp3">>
-<<cacheaudio "GB_08" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_08.mp3">>
-<<cacheaudio "GB_08.2" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_08.2.mp3">>
-<<cacheaudio "GB_09" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_09.mp3">>
-<<cacheaudio "GB_10" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_10.mp3">>
-<<cacheaudio "GB_10A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_10A.mp3">>
-<<cacheaudio "GB_11" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_11.mp3">>
-<<cacheaudio "GB_12" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_12.mp3">>
-<<cacheaudio "GB_13" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_13.mp3">>
-<<cacheaudio "GB_14" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_14.mp3">>
-<<cacheaudio "GB_15" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_15.mp3">>
-<<cacheaudio "GB_16A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_16A.mp3">>
-<<cacheaudio "GB_16B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_16B.mp3">>
-<<cacheaudio "GB_17" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_17.mp3">>
-<<cacheaudio "GB_18" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_18.mp3">>
-<<cacheaudio "GB_18.2" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_18.2.mp3">>
-<<cacheaudio "GB_18.3" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_18.3.mp3">>
-<<cacheaudio "GB_19A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19A.mp3">>
-<<cacheaudio "GB_19B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19B.mp3">>
-<<cacheaudio "GB_19.2B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19.2B.mp3">>
-<<cacheaudio "GB_19.3B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_19.3B.mp3">>
-<<cacheaudio "GB_20" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_20.mp3">>
-<<cacheaudio "GB_21" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_21.mp3">>
-<<cacheaudio "GB_22" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_22.mp3">>
-<<cacheaudio "GB_23" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_23.mp3">>
-<<cacheaudio "GB_24" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_24.mp3">>
-<<cacheaudio "GB_25" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_25.mp3">>
-<<cacheaudio "GB_26A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_26A.mp3">>
-<<cacheaudio "GB_26B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_26B.mp3">>
-<<cacheaudio "GB_27B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_27B.mp3">>
-<<cacheaudio "GB_28" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_28.mp3">>
-<<cacheaudio "GB_29" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_29.mp3">>
-<<cacheaudio "GB_30" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_30.mp3">>
-<<cacheaudio "GB_31" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_31.mp3">>
-<<cacheaudio "GB_32" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_32.mp3">>
-<<cacheaudio "GB_33" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB_33.mp3">>
-<<cacheaudio "GB_34" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB-34.mp3">>
-<<cacheaudio "GB_35" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/GB-35.mp3">>
-<<cacheaudio "ghost_charlie" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/ghost_charlie.mp3">>
-<<cacheaudio "ghost_myweddingring" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/ghost_myweddingring.mp3">>
-<<cacheaudio "whitenoise_short_1" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/whitenoise_short_1.mp3">>
-<<cacheaudio "whitenoise_short_2" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/whitenoise_short_2.mp3">>
-<<cacheaudio "whitenoise_short_3" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/whitenoise_short_3.mp3">>
-<<cacheaudio "whitenoise_short_4" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/whitenoise_short_4.mp3">>
-<<cacheaudio "whitenoise_short_5" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/whitenoise_short_5.mp3">>
-<<cacheaudio "whitenoise_short_6" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/whotenoise_short_6.mp3">>
-<<cacheaudio "perfectgroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3">>
-<<cacheaudio "owndevice" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/XX_02_owndevice.mp3">>
-<<cacheaudio "solo" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/GB/XX_02_solo.mp3">>
-<<cacheaudio "03" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3">>
+<<cacheaudio "GB_01" "https://www.youhavefoundconey.net/tgksnd/GB/GB_01.mp3">>
+<<cacheaudio "GB_04" "https://www.youhavefoundconey.net/tgksnd/GB/GB-04.mp3">>
+<<cacheaudio "GB_05" "https://www.youhavefoundconey.net/tgksnd/GB/GB_05.mp3">>
+<<cacheaudio "GB_06" "https://www.youhavefoundconey.net/tgksnd/GB/GB_06.mp3">>
+<<cacheaudio "GB_07" "https://www.youhavefoundconey.net/tgksnd/GB/GB_07.mp3">>
+<<cacheaudio "GB_08" "https://www.youhavefoundconey.net/tgksnd/GB/GB_08.mp3">>
+<<cacheaudio "GB_08.2" "https://www.youhavefoundconey.net/tgksnd/GB/GB_08.2.mp3">>
+<<cacheaudio "GB_09" "https://www.youhavefoundconey.net/tgksnd/GB/GB_09.mp3">>
+<<cacheaudio "GB_10" "https://www.youhavefoundconey.net/tgksnd/GB/GB_10.mp3">>
+<<cacheaudio "GB_10A" "https://www.youhavefoundconey.net/tgksnd/GB/GB_10A.mp3">>
+<<cacheaudio "GB_11" "https://www.youhavefoundconey.net/tgksnd/GB/GB_11.mp3">>
+<<cacheaudio "GB_12" "https://www.youhavefoundconey.net/tgksnd/GB/GB_12.mp3">>
+<<cacheaudio "GB_13" "https://www.youhavefoundconey.net/tgksnd/GB/GB_13.mp3">>
+<<cacheaudio "GB_14" "https://www.youhavefoundconey.net/tgksnd/GB/GB_14.mp3">>
+<<cacheaudio "GB_15" "https://www.youhavefoundconey.net/tgksnd/GB/GB_15.mp3">>
+<<cacheaudio "GB_16A" "https://www.youhavefoundconey.net/tgksnd/GB/GB_16A.mp3">>
+<<cacheaudio "GB_16B" "https://www.youhavefoundconey.net/tgksnd/GB/GB_16B.mp3">>
+<<cacheaudio "GB_17" "https://www.youhavefoundconey.net/tgksnd/GB/GB_17.mp3">>
+<<cacheaudio "GB_18" "https://www.youhavefoundconey.net/tgksnd/GB/GB_18.mp3">>
+<<cacheaudio "GB_18.2" "https://www.youhavefoundconey.net/tgksnd/GB/GB_18.2.mp3">>
+<<cacheaudio "GB_18.3" "https://www.youhavefoundconey.net/tgksnd/GB/GB_18.3.mp3">>
+<<cacheaudio "GB_19A" "https://www.youhavefoundconey.net/tgksnd/GB/GB_19A.mp3">>
+<<cacheaudio "GB_19B" "https://www.youhavefoundconey.net/tgksnd/GB/GB_19B.mp3">>
+<<cacheaudio "GB_19.2B" "https://www.youhavefoundconey.net/tgksnd/GB/GB_19.2B.mp3">>
+<<cacheaudio "GB_19.3B" "https://www.youhavefoundconey.net/tgksnd/GB/GB_19.3B.mp3">>
+<<cacheaudio "GB_20" "https://www.youhavefoundconey.net/tgksnd/GB/GB_20.mp3">>
+<<cacheaudio "GB_21" "https://www.youhavefoundconey.net/tgksnd/GB/GB_21.mp3">>
+<<cacheaudio "GB_22" "https://www.youhavefoundconey.net/tgksnd/GB/GB_22.mp3">>
+<<cacheaudio "GB_23" "https://www.youhavefoundconey.net/tgksnd/GB/GB_23.mp3">>
+<<cacheaudio "GB_24" "https://www.youhavefoundconey.net/tgksnd/GB/GB_24.mp3">>
+<<cacheaudio "GB_25" "https://www.youhavefoundconey.net/tgksnd/GB/GB_25.mp3">>
+<<cacheaudio "GB_26A" "https://www.youhavefoundconey.net/tgksnd/GB/GB_26A.mp3">>
+<<cacheaudio "GB_26B" "https://www.youhavefoundconey.net/tgksnd/GB/GB_26B.mp3">>
+<<cacheaudio "GB_27B" "https://www.youhavefoundconey.net/tgksnd/GB/GB_27B.mp3">>
+<<cacheaudio "GB_28" "https://www.youhavefoundconey.net/tgksnd/GB/GB_28.mp3">>
+<<cacheaudio "GB_29" "https://www.youhavefoundconey.net/tgksnd/GB/GB_29.mp3">>
+<<cacheaudio "GB_30" "https://www.youhavefoundconey.net/tgksnd/GB/GB_30.mp3">>
+<<cacheaudio "GB_31" "https://www.youhavefoundconey.net/tgksnd/GB/GB_31.mp3">>
+<<cacheaudio "GB_32" "https://www.youhavefoundconey.net/tgksnd/GB/GB_32.mp3">>
+<<cacheaudio "GB_33" "https://www.youhavefoundconey.net/tgksnd/GB/GB_33.mp3">>
+<<cacheaudio "GB_34" "https://www.youhavefoundconey.net/tgksnd/GB/GB-34.mp3">>
+<<cacheaudio "GB_35" "https://www.youhavefoundconey.net/tgksnd/GB/GB-35.mp3">>
+<<cacheaudio "ghost_charlie" "https://www.youhavefoundconey.net/tgksnd/GB/ghost_charlie.mp3">>
+<<cacheaudio "ghost_myweddingring" "https://www.youhavefoundconey.net/tgksnd/GB/ghost_myweddingring.mp3">>
+<<cacheaudio "whitenoise_short_1" "https://www.youhavefoundconey.net/tgksnd/GB/whitenoise_short_1.mp3">>
+<<cacheaudio "whitenoise_short_2" "https://www.youhavefoundconey.net/tgksnd/GB/whitenoise_short_2.mp3">>
+<<cacheaudio "whitenoise_short_3" "https://www.youhavefoundconey.net/tgksnd/GB/whitenoise_short_3.mp3">>
+<<cacheaudio "whitenoise_short_4" "https://www.youhavefoundconey.net/tgksnd/GB/whitenoise_short_4.mp3">>
+<<cacheaudio "whitenoise_short_5" "https://www.youhavefoundconey.net/tgksnd/GB/whitenoise_short_5.mp3">>
+<<cacheaudio "whitenoise_short_6" "https://www.youhavefoundconey.net/tgksnd/GB/whotenoise_short_6.mp3">>
+<<cacheaudio "perfectgroup" "https://www.youhavefoundconey.net/tgksnd/MC/XX_02_perfectgroup.mp3">>
+<<cacheaudio "owndevice" "https://www.youhavefoundconey.net/tgksnd/GB/XX_02_owndevice.mp3">>
+<<cacheaudio "solo" "https://www.youhavefoundconey.net/tgksnd/GB/XX_02_solo.mp3">>
+<<cacheaudio "03" "https://www.youhavefoundconey.net/tgksnd/MC/XX_03.mp3">>
 
 
 <<waitforaudio>>
